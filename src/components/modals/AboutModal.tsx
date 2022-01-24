@@ -7,8 +7,8 @@ type Props = {
 
 export const AboutModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="About" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
+    <BaseModal title="about" isOpen={isOpen} handleClose={handleClose}>
+      <p className="text-sm text-white">
         this is an open source clone of the game Wordle -{' '}
         <a
           href="https://github.com/ericdrgn/wordle"
