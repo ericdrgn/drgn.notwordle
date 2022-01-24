@@ -21,11 +21,11 @@ export const Key = ({
   const classes = classnames(
     'flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none',
     {
-      'bg-black border-white hover:bg-black active:bg-black': !status,
-      'bg-slate-400 text-white': status === 'absent',
-      'bg-green-500 hover:bg-green-600 active:bg-green-700 text-white':
+      'bg-black border-solid border-2 border-white hover:bg-black active:bg-black': !status,
+      'bg-slate-400 border-solid border-2 border-white text-white': status === 'absent',
+      'bg-green-500 border-solid border-2 border-white hover:bg-green-600 active:bg-green-700 text-white':
         status === 'correct',
-      'bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white':
+      'bg-yellow-500 border-solid border-2 border-white hover:bg-yellow-600 active:bg-yellow-700 text-white':
         status === 'present',
     }
   )
