@@ -9,7 +9,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="about" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white">
-        this is an open source clone of the game Wordle -{' '}
+        this is an opinionated fork of an open source source clone of the game wordle -{' '}
         <a
           href="https://github.com/ericdrgn/wordle"
           className="underline font-bold"
