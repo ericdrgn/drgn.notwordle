@@ -33,7 +33,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="T" />
       </div>
       <p className="text-sm text-white">
-        the letter "I" is in the word but in the wrong spot
+        the letter "L" is in the word but in the wrong spot
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
