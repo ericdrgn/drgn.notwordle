@@ -8,9 +8,9 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="How to play" isOpen={isOpen} handleClose={handleClose}>
-      <p className="text-sm text-gray-500">
-        Guess the WORDLE in 6 tries. After each guess, the color of the tiles
+    <BaseModal title="how to play" isOpen={isOpen} handleClose={handleClose}>
+      <p className="text-sm text-white">
+        guess the word in six tries. after each guess, the color of the tiles
         will change to show how close your guess was to the word.
       </p>
 
@@ -21,8 +21,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="R" />
         <Cell value="Y" />
       </div>
-      <p className="text-sm text-gray-500">
-        The letter W is in the word and in the correct spot.
+      <p className="text-sm text-white">
+        the letter "W" is in the word and in the correct spot
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -32,8 +32,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="O" />
         <Cell value="T" />
       </div>
-      <p className="text-sm text-gray-500">
-        The letter L is in the word but in the wrong spot.
+      <p className="text-sm text-white">
+        the letter "I" is in the word but in the wrong spot
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -43,8 +43,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="U" status="absent" />
         <Cell value="E" />
       </div>
-      <p className="text-sm text-gray-500">
-        The letter U is not in the word in any spot.
+      <p className="text-sm text-white">
+        the letter "U" is not in the word in any spot
       </p>
     </BaseModal>
   )
