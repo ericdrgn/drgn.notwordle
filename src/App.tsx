@@ -97,7 +97,7 @@ function App() {
   }
 
   return (
-    <div className="py-8 bg-black max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div className="py-8 bg-black text-white max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8">
         <h1 className="text-xl grow font-bold">dragon wordle</h1>
         <InformationCircleIcon
