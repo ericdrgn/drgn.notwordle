@@ -180,7 +180,7 @@ function App() {
         </h1>
         {isDarkMode ? (
           <MinusCircleIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
