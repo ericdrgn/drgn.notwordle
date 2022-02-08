@@ -178,6 +178,10 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
+        <InformationCircleIcon
+          className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
+          onClick={() => setIsInfoModalOpen(true)}
+        />
         {isDarkMode ? (
           <MinusCircleIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
@@ -189,12 +193,8 @@ function App() {
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <InformationCircleIcon
-          className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-          onClick={() => setIsInfoModalOpen(true)}
-        />
         <ShareIcon
-          className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-3 cursor-pointer stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
