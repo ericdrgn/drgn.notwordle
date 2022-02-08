@@ -56,7 +56,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5> <a href="https://www.powerlanguage.co.uk/wordle/">play original</a> </h5>
+            <h5>{NEW_WORD_TEXT} <a style="text-decoration: underline;" href="https://www.powerlanguage.co.uk/wordle/">original</a> </h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
