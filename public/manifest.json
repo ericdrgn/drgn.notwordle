@@ -1,6 +1,6 @@
 {
-  "short_name": "Game",
-  "name": "Game",
+  "short_name": "drgn",
+  "name": "not wordle",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#ffffff",
+  "background_color": "#000000"
 }
