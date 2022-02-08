@@ -1,7 +1,7 @@
 import {
   InformationCircleIcon,
   ShareIcon,
-  SunIcon,
+  MinusCircleIcon,
   MoonIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
@@ -179,7 +179,7 @@ function App() {
           {GAME_TITLE}
         </h1>
         {isDarkMode ? (
-          <SunIcon
+          <MinusCircleIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
