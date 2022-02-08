@@ -28,7 +28,7 @@ export const Key = ({
       'transition ease-in-out': isRevealing,
       'bg-black dark:bg-black dark:border-solid dark:border-2 dark:border-white hover:bg-black active:bg-black':
         !status,
-      'bg-slate-400 dark:bg-black text-white': status === 'absent',
+      'bg-black text-black dark:bg-black dark:text-white': status === 'absent',
       'bg-green-500 hover:bg-green-600 dark:border-solid dark:border-2 dark:border-white dark:text-white active:bg-green-700 text-black':
         status === 'correct',
       'bg-yellow-500 hover:bg-yellow-600 dark:border-solid dark:border-2 cark:border-white active:bg-yellow-700 text-white':
