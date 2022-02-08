@@ -62,15 +62,6 @@ export const StatsModal = ({
               date={tomorrow}
               daysInHours={true}
             />
-      <p      
-        or{' '}
-        <a
-          href="https://www.powerlanguage.co.uk/wordle/"
-          className="underline font-bold"
-        >
-          play original
-        </a>{' '}
-      </p>
           </div>
           <button
             type="button"
