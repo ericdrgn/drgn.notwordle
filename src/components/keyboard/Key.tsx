@@ -26,7 +26,7 @@ export const Key = ({
     'flex items-center justify-center rounded mx-0.5 text-xs font-bold cursor-pointer select-none dark:text-white',
     {
       'transition ease-in-out': isRevealing,
-      'bg-white border-solid border-2 border-black dark:bg-black border-solid border-2 border-white hover:bg-black active:bg-black':
+      'bg-white border-solid border-2 border-black dark:bg-black dark:border-solid dark:border-2 dark:border-white hover:bg-black active:bg-black':
         !status,
       'bg-slate-400 dark:bg-black text-black': status === 'absent',
       'bg-green-500 hover:bg-green-600 border-solid border-2 border-white active:bg-green-700 text-white':
