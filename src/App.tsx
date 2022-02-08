@@ -1,6 +1,6 @@
 import {
   InformationCircleIcon,
-  ChartBarIcon,
+  ShareIcon,
   SunIcon,
   MoonIcon,
 } from '@heroicons/react/outline'
@@ -193,7 +193,7 @@ function App() {
           className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
-        <ChartBarIcon
+        <ShareIcon
           className="h-6 w-6 mr-3 cursor-pointer dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
