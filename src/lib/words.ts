@@ -13,7 +13,7 @@ export const isWinningWord = (word: string) => {
 }
 
 export const getWordOfDay = () => {
-  // January 1, 2022 Game Epoch
+  // Dec 31, 2021 Game Epoch to keep the day of wordle in sync with day of year
   const epochMs = new Date('December 31, 2021 00:00:00').valueOf()
   const now = Date.now()
   const msInDay = 86400000
