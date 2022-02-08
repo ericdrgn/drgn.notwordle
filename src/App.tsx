@@ -2,7 +2,7 @@ import {
   InformationCircleIcon,
   ShareIcon,
   MinusCircleIcon,
-  MoonIcon,
+  PlusCircleIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -180,12 +180,12 @@ function App() {
         </h1>
         {isDarkMode ? (
           <MinusCircleIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
-          <MoonIcon
-            className="h-6 w-6 mr-2 cursor-pointer"
+          <PlusCircleIcon
+            className="h-6 w-6 mr-2 stroke-white cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
