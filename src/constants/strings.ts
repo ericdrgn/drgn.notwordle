@@ -1,6 +1,5 @@
 export const GAME_TITLE = 'not wordle'
-export const CORRECT_WORD = (solution: string) =>
-  `${solution}`
+
 export const WIN_MESSAGES = ['are you... the one?', 'siiiiiiick', 'is this your world? do we just live in it?']
 export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'about this game'
