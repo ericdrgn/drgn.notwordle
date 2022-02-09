@@ -1,5 +1,6 @@
 import { WORDS } from '../constants/wordlist'
 import { VALID_GUESSES } from '../constants/validGuesses'
+import { getGuessStatuses } from './statuses'
 
 export const isWordInWordList = (word: string) => {
   return (
@@ -10,6 +11,28 @@ export const isWordInWordList = (word: string) => {
 
 export const isWinningWord = (word: string) => {
   return solution === word
+}
+
+// build a set of previously revealed letters - present and correct
+// force current guess to have all of them
+export const findFirstMissingLetter = (word: string, guesses: string[]) => {
+  const knownLetterSet = new Set<string>()
+  for (const guess of guesses) {
+    const statuses = getGuessStatuses(guess)
+    guess.split('').forEach((_, i) => {
+      if (statuses[i] === 'correct' || statuses[i] === 'present') {
+        knownLetterSet.add(guess[i])
+      }
+    })
+  }
+
+  for (const letter of Array.from(knownLetterSet.values())) {
+    // fail fast, always return first failed letter if applicable
+    if (!word.includes(letter)) {
+      return letter
+    }
+  }
+  return false
 }
 
 export const getWordOfDay = () => {
