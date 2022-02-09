@@ -1,4 +1,5 @@
 import { BaseModal } from './BaseModal'
+import { SHARE_TEXT } from '../../constants/strings'
 
 type Props = {
   isOpen: boolean
@@ -22,6 +23,13 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
           className="underline font-bold"
         >
           play the original here
+        </a>{' '}
+         and{' '}
+        <a
+          href="https://www.merriam-webster.com/dictionary/{SHARE_TEXT}"
+          className="underline font-bold"
+        >
+          check the definition
         </a>{' '}
       </p>
     </BaseModal>
