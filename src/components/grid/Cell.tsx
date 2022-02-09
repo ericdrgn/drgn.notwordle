@@ -31,7 +31,7 @@ export const Cell = ({
         status === 'absent',
       'correct shadowed bg-black text-green-500 border-black dark:bg-green-500 dark:text-white dark:border-green-500':
         status === 'correct',
-      'present shadowed dark:border-dashed bg-black text-yellow-500 border-black dark:bg-yellow-500 dark:text-white dark:border-yellow-500':
+      'present shadowed dark:border-dashed dark:border-2 bg-black text-yellow-500 border-black dark:bg-yellow-500 dark:text-white dark:border-white':
         status === 'present',
       'cell-fill-animation': isFilled,
       'cell-reveal': shouldReveal,
