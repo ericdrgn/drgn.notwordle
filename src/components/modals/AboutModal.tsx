@@ -18,7 +18,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
         and{' '}
         <a
-          href="https://github.com/ericdrgn/drgn.notwordle"
+          href="https://wordle.drgn.app"
           className="underline font-bold"
         >
           play not wordle here
