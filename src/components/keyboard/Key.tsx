@@ -29,9 +29,9 @@ export const Key = ({
       'bg-black text-white dark:bg-black dark:border-solid dark:border-2 dark:border-white hover:bg-black active:bg-black':
         !status,
       'bg-black text-black dark:bg-black dark:text-white': status === 'absent',
-      'bg-black text-blue-400 hover:bg-black dark:bg-blue-400 dark:text-white dark:border-solid dark:border-4 dark:border-white dark:text-white active:bg-black':
+      'bg-black text-blue-300 hover:bg-black dark:bg-blue-300 dark:text-white dark:border-solid dark:border-4 dark:border-white dark:text-white active:bg-black':
         status === 'correct',
-      'bg-black text-yellow-700 hover:bg-black dark:bg-yellow-700 dark:text-white dark:border-dashed dark:border-4 dark:border-white active:bg-black':
+      'bg-black text-yellow-300 hover:bg-black dark:bg-yellow-300 dark:text-white dark:border-dashed dark:border-4 dark:border-white active:bg-black':
         status === 'present',
     }
   )
