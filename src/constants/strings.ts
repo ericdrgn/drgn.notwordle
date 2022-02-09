@@ -1,6 +1,6 @@
 export const GAME_TITLE = 'luckle'
 
-export const WIN_MESSAGES = ['you are the one', 'you are one lucky ducky', 'wow... just wow']
+export const WIN_MESSAGES = ['you ARE the one', 'you are one lucky ducky', 'wow... just WOW']
 export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'about this game'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'not enough letters, loser'
