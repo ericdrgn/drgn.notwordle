@@ -26,7 +26,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
          and{' '}
         <a
-          href="https://www.merriam-webster.com/dictionary/{SHARE_TEXT}"
+          href="https://www.merriam-webster.com/dictionary/"{SHARE_TEXT}
           className="underline font-bold"
         >
           check the definition
