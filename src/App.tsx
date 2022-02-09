@@ -3,6 +3,8 @@ import {
   ShareIcon,
   MinusCircleIcon,
   PlusCircleIcon,
+  CakeIcon,
+  AcademicCapIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -27,7 +29,12 @@ import {
   REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
 } from './constants/settings'
-import { isWordInWordList, isWinningWord, solution } from './lib/words'
+import {
+  isWordInWordList,
+  isWinningWord,
+  solution,
+  findFirstMissingLetter,
+} from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
   loadGameStateFromLocalStorage,
@@ -74,6 +81,16 @@ function App() {
   })
 
   const [stats, setStats] = useState(() => loadStats())
+  
+  const [isHardMode, setIsHardMode] = useState(
+    localStorage.getItem('gameMode')
+      ? localStorage.getItem('gameMode') === 'hard'
+      : false
+  )
+
+  const [isMissingPreviousLetters, setIsMissingPreviousLetters] =
+    useState(false)
+  const [missingLetterMessage, setIsMissingLetterMessage] = useState('')
 
   useEffect(() => {
     if (isDarkMode) {
@@ -86,6 +103,11 @@ function App() {
   const handleDarkMode = (isDark: boolean) => {
     setIsDarkMode(isDark)
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
+  }
+
+  const handleHardMode = (isHard: boolean) => {
+    setIsHardMode(isHard)
+    localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
   }
 
   useEffect(() => {
@@ -144,6 +166,18 @@ function App() {
       }, ALERT_TIME_MS)
     }
 
+    // enforce hard mode - all guesses must contain all previously revealed letters
+    if (isHardMode) {
+      const firstMissingLetter = findFirstMissingLetter(currentGuess, guesses)
+      if (firstMissingLetter) {
+        setIsMissingLetterMessage(`Missing letter ${firstMissingLetter}`)
+        setIsMissingPreviousLetters(true)
+        return setTimeout(() => {
+          setIsMissingPreviousLetters(false)
+        }, ALERT_TIME_MS)
+      }
+    }
+
     setIsRevealing(true)
     // turn this back off after all
     // chars have been revealed
@@ -183,6 +217,17 @@ function App() {
           className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
+        {isHardMode ? (
+          <AcademicCapIcon
+            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+            onClick={() => handleHardMode(!isHardMode)}
+          />
+        ) : (
+          <CakeIcon
+            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+            onClick={() => handleHardMode(!isHardMode)}
+          />
+        )}
         {isDarkMode ? (
           <MinusCircleIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
@@ -226,6 +271,7 @@ function App() {
           setSuccessAlert(GAME_COPIED_MESSAGE)
           return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
         }}
+        isHardMode={isHardMode}
       />
       <AboutModal
         isOpen={isAboutModalOpen}
@@ -245,6 +291,7 @@ function App() {
         message={WORD_NOT_FOUND_MESSAGE}
         isOpen={isWordNotFoundAlertOpen}
       />
+      <Alert message={missingLetterMessage} isOpen={isMissingPreviousLetters} />
       <Alert
         message={CORRECT_WORD_MESSAGE(solution)}
         isOpen={isGameLost && !isRevealing}
