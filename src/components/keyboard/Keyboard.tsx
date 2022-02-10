@@ -91,7 +91,7 @@ export const Keyboard = ({
             isRevealing={isRevealing}
           />
         ))}
-        <Key width={65.4} value="ENTER" onClick={onClick}>
+        <Key width={65.4} status="absent" value="ENTER" onClick={onClick}>
           <CheckCircleIcon
                     className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
                   />
