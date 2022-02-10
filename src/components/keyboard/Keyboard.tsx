@@ -77,7 +77,7 @@ export const Keyboard = ({
         ))}
       </div>
       <div className="flex justify-center">
-        <Key width={65.4} value="DELETE" onClick={onClick}>
+        <Key width={65.4} status="absent" value="DELETE" onClick={onClick}>
           <BackspaceIcon
                     className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
                   />
