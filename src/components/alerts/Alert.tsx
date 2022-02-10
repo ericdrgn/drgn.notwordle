@@ -6,15 +6,17 @@ type Props = {
   isOpen: boolean
   message: string
   variant?: 'success' | 'warning'
+  topMost?: boolean
 }
 
-export const Alert = ({ isOpen, message, variant = 'warning' }: Props) => {
+export const Alert = ({ isOpen, message, variant = 'warning', topMost = true }: Props) => {
   const classes = classNames(
     'fixed top-5 left-1/2 transform -translate-x-1/2 max-w-sm w-full shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
     {
       'bg-orange-500 text-white': variant === 'warning',
       'bg-blue-500 text-white': variant === 'success',
-    }
+    },
+    topMost ? 'z-20' : ''
   )
 
   return (
