@@ -1,4 +1,4 @@
-export const GAME_TITLE = 'hardle'
+export const GAME_TITLE = 'extremele'
 
 export const WIN_MESSAGES = ['are you... the one?', 'siiiiiiick', 'is this your world? do we just live in it?']
 export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
