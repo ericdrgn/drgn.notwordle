@@ -10,41 +10,21 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="how to play" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
-        guess the word in 6 tries. after each guess, the color of the tiles will
-        change to show how close your guess was to the word.
+        guess the letter in 6 tries. it isn't that hard, if you're lucky.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="W" status="correct" />
-        <Cell value="E" />
-        <Cell value="A" />
-        <Cell value="R" />
-        <Cell value="Y" />
+        <Cell value="L" status="correct" />
       </div>
       <p className="text-sm text-white dark:text-white">
-        the letter W is in the word and in the correct spot
+        the letter L is the letter
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="P" />
-        <Cell value="I" />
-        <Cell value="L" status="present" />
-        <Cell value="O" />
-        <Cell value="T" />
-      </div>
-      <p className="text-sm text-white dark:text-white">
-        the letter L is in the word but in the wrong spot
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="V" />
-        <Cell value="A" />
-        <Cell value="G" />
         <Cell value="U" status="absent" />
-        <Cell value="E" />
       </div>
       <p className="text-sm text-white dark:text-white">
-        the letter U is not in the word in any spot
+        the letter U is not the letter
       </p>
     </BaseModal>
   )
