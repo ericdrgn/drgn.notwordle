@@ -58,7 +58,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5>{NEW_WORD_TEXT} <a href="https://wordler.space" className="underline font-bold">more wordle</a> </h5>
+            <h5><a href="https://wordler.space" className="underline font-bold">more wordle</a> {NEW_WORD_TEXT} <a href={`https://www.merriam-webster.com/dictionary/${solution}`} target="_blank" rel="noreferrer">definition</a> </h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
