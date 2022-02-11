@@ -63,7 +63,9 @@ export const StatsModal = ({
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
-              daysInHours={true}
+              intervalDelay={0}
+              precision={3}
+              renderer={props => <div>{props.total}</div>}
             />
           </div>
           <button
