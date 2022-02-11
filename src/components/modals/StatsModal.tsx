@@ -6,23 +6,11 @@ import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {
-  solution,
-} from './lib/words'
-import { useState, useEffect } from 'react'
-import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
-  DICTIONARY_DEFINITION,
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
-import { addStatsForCompletedGame, loadStats } from './lib/stats'
-import {
-  loadGameStateFromLocalStorage,
-  saveGameStateToLocalStorage,
-} from './lib/localStorage'
-
-import './App.css'
 
 type Props = {
   isOpen: boolean
@@ -70,7 +58,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5>{NEW_WORD_TEXT} {DICTIONARY_DEFINITION(solution)} </h5>
+            <h5>{NEW_WORD_TEXT} <a href="https://wordler.space" className="underline font-bold">more wordle</a> </h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
