@@ -214,17 +214,17 @@ function App() {
           {GAME_TITLE}
         </h1>
         <InformationCircleIcon
-          className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
+          className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
         {isHardMode ? (
           <AcademicCapIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
             onClick={() => handleHardMode(!isHardMode)}
           />
         ) : (
           <CakeIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
             onClick={() => handleHardMode(!isHardMode)}
           />
         )}
@@ -235,12 +235,12 @@ function App() {
           />
         ) : (
           <PlusCircleIcon
-            className="h-6 w-6 mr-2 stroke-white cursor-pointer"
+            className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-white cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
         <ShareIcon
-          className="h-6 w-6 mr-3 cursor-pointer stroke-white"
+          className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
