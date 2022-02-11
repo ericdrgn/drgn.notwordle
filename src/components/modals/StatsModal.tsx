@@ -6,11 +6,9 @@ import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {
-  isWordInWordList,
-  isWinningWord,
   solution,
-  findFirstMissingLetter,
 } from './lib/words'
+import { useState, useEffect } from 'react'
 import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
@@ -18,6 +16,13 @@ import {
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
+import { addStatsForCompletedGame, loadStats } from './lib/stats'
+import {
+  loadGameStateFromLocalStorage,
+  saveGameStateToLocalStorage,
+} from './lib/localStorage'
+
+import './App.css'
 
 type Props = {
   isOpen: boolean
