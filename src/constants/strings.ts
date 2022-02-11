@@ -6,7 +6,7 @@ export const ABOUT_GAME_MESSAGE = 'about this game'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'not enough letters, loser'
 export const WORD_NOT_FOUND_MESSAGE = 'word not found, derp'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `<a href="https://www.merriam-webster.com/dictionary/${solution}" className="underline font-bold">the letter was ${solution}</a>`
+  `the letter was ${solution}`
 export const ENTER_TEXT = 'enter'
 export const DELETE_TEXT = 'delete'
 export const STATISTICS_TITLE = 'statistics'
