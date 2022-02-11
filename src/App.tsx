@@ -285,15 +285,6 @@ function App() {
       >
         {ABOUT_GAME_MESSAGE}
       </button>
-      
-      <button
-        type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black select-none"
-        onClick={() => setIsAboutModalOpen(true)}
-        isOpen={isGameLost && !isRevealing}
-      >
-        {CORRECT_WORD_MESSAGE(solution)}
-      </button>
 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
       <Alert
