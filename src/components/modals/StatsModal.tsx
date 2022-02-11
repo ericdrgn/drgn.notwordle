@@ -6,6 +6,12 @@ import { shareStatus } from '../../lib/share'
 import { tomorrow } from '../../lib/words'
 import { BaseModal } from './BaseModal'
 import {
+  isWordInWordList,
+  isWinningWord,
+  solution,
+  findFirstMissingLetter,
+} from './lib/words'
+import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
   DICTIONARY_DEFINITION,
