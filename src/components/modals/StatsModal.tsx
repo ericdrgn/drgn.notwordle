@@ -59,7 +59,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5>{NEW_WORD_TEXT} {DICTIONARY_DEFINITION} </h5>
+            <h5>{NEW_WORD_TEXT} {DICTIONARY_DEFINITION(solution)} </h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
