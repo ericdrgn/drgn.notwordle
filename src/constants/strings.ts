@@ -1,5 +1,6 @@
 export const GAME_TITLE = 'luckle'
-
+export const DICTIONARY_DEFINITION = (solution: string) =>
+  `https://www.merriam-webster.com/dictionary/${solution}`
 export const WIN_MESSAGES = ['you ARE the one', 'you are one lucky ducky', 'wow... just WOW']
 export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'about this game'
