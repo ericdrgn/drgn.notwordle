@@ -10,8 +10,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="man drudgele" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
-        guess the word in 6 tries. after each guess, the color of the tiles will
-        change to show how close your guess was to the word.
+        hack the password in 10 tries. if not you will be locked out of the system.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
