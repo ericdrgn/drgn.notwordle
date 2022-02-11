@@ -8,6 +8,7 @@ import { BaseModal } from './BaseModal'
 import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
+  DICTIONARY_DEFINITION,
   NEW_WORD_TEXT,
   SHARE_TEXT,
 } from '../../constants/strings'
@@ -58,7 +59,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5>{NEW_WORD_TEXT} <a href="https://wordle.drgn.app" className="underline font-bold">not wordle</a> </h5>
+            <h5>{NEW_WORD_TEXT} <a href={DICTIONARY_DEFINITION} className="underline font-bold">not wordle</a> </h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
