@@ -36,8 +36,8 @@ export const findFirstMissingLetter = (word: string, guesses: string[]) => {
 }
 
 export const getWordOfDay = () => {
-  // Dec 31, 2021 Game Epoch to keep the day of wordle in sync with day of year
-  const epochMs = new Date('December 31, 2021 00:00:00').valueOf()
+  // specific epoch to keep all words the same just based on every 30 minutes
+  const epochMs = 1644562800000
   const now = Date.now()
   const msInDay = 1800000
   const index = Math.floor((now - epochMs) / msInDay)
