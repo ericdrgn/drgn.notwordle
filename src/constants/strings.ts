@@ -1,4 +1,4 @@
-export const GAME_TITLE = 'not wordle'
+export const GAME_TITLE = 'wordle'
 
 export const WIN_MESSAGES = ['are you... the one?', 'not wordle, meet your maker', 'is this your world? do we just live in it?']
 export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
