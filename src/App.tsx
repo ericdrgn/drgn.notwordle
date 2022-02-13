@@ -213,10 +213,6 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        <QuestionMarkCircleIcon
-          className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
-          onClick={() => setIsInfoModalOpen(true)}
-        />
         {isHardMode ? (
           <PuzzleIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
@@ -289,9 +285,11 @@ function App() {
       <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black select-none"
-        onClick={() => setIsAboutModalOpen(true)}
+        onClick={() => setIsInfoModalOpen(true)}
       >
-        {ABOUT_GAME_MESSAGE}
+          <QuestionMarkCircleIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                  />
       </button>
 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
