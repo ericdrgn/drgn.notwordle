@@ -15,6 +15,7 @@ export const Alert = ({ isOpen, message, variant = 'warning', topMost = true }: 
     {
       'bg-orange-500 text-white': variant === 'warning',
       'bg-blue-500 text-white': variant === 'success',
+      'bg-black text-white': variant === 'minimal',
     },
     topMost ? 'z-20' : ''
   )
