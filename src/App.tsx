@@ -293,7 +293,7 @@ function App() {
         onClick={() => setIsInfoModalOpen(true)}
       >
           <QuestionMarkCircleIcon
-                    className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
 
