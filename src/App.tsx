@@ -108,7 +108,7 @@ function App() {
   const handleHardMode = (isHard: boolean) => {
     setIsHardMode(isHard)
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
-    setSuccessAlert(GAME_COPIED_MESSAGE)
+    setSuccessAlert(HARD_MODE)
     return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
   }
 
