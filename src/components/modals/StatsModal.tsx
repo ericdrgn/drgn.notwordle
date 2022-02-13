@@ -1,3 +1,6 @@
+import {
+  ShareIcon,
+} from '@heroicons/react/outline'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
@@ -10,7 +13,6 @@ import {
   STATISTICS_TITLE,
   GUESS_DISTRIBUTION_TEXT,
   NEW_WORD_TEXT,
-  SHARE_TEXT,
 } from '../../constants/strings'
 
 type Props = {
@@ -68,13 +70,15 @@ export const StatsModal = ({
           </div>
           <button
             type="button"
-            className="mt-2 w-full rounded-md border border-white shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:border-white sm:text-sm"
+            className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:border-white sm:text-sm"
             onClick={() => {
               shareStatus(guesses, isGameLost, isHardMode)
               handleShare()
             }}
           >
-            {SHARE_TEXT}
+          <ShareIcon
+                    className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+                  />
           </button>
         </div>
       )}
