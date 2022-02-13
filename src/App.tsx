@@ -1,6 +1,6 @@
 import {
   QuestionMarkCircleIcon,
-  ChartSquareBarIcon,
+  ChartBarIcon,
   EyeOffIcon,
   EyeIcon,
   CakeIcon,
@@ -239,7 +239,7 @@ function App() {
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <ChartSquareBarIcon
+        <ChartBarIcon
           className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
