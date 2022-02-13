@@ -20,6 +20,8 @@ import {
   CORRECT_WORD_MESSAGE,
   HARD_MODE,
   EASY_MODE,
+  FOCUS_MODE,
+  VIS_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -234,12 +236,20 @@ function App() {
         {isDarkMode ? (
           <EyeIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
-            onClick={() => handleDarkMode(!isDarkMode)}
+            onClick={() => {
+              handleDarkMode(!isDarkMode)
+              setSuccessAlert(FOCUS_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         ) : (
           <EyeIcon
             className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-slate-800 cursor-pointer"
-            onClick={() => handleDarkMode(!isDarkMode)}
+            onClick={() => {
+              handleDarkMode(!isDarkMode)
+              setSuccessAlert(VIS_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         )}
         <TerminalIcon
