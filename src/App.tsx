@@ -21,6 +21,8 @@ import {
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
+  HARD_MODE,
+  EASY_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -220,12 +222,18 @@ function App() {
         {isHardMode ? (
           <LightningBoltIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(EASY_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
           />
         ) : (
           <KeyIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(HARD_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
           />
         )}
         {isDarkMode ? (
