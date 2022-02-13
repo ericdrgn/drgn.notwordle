@@ -237,6 +237,7 @@ function App() {
               return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
             }}
           />
+        )}
         ) : (
           <EyeIcon
             className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-white cursor-pointer"
