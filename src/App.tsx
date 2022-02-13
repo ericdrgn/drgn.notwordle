@@ -1,10 +1,8 @@
 import {
   QuestionMarkCircleIcon,
   UserGroupIcon,
-  EyeOffIcon,
   EyeIcon,
-  ViewGridAddIcon,
-  ViewGridIcon,
+  PuzzleIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -215,7 +213,7 @@ function App() {
           {GAME_TITLE}
         </h1>
         {isHardMode ? (
-          <ViewGridAddIcon
+          <PuzzleIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => {
               handleHardMode(!isHardMode)
@@ -224,7 +222,7 @@ function App() {
             }}
           />
         ) : (
-          <ViewGridIcon
+          <PuzzleIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => {
               handleHardMode(!isHardMode)
@@ -233,23 +231,19 @@ function App() {
             }}
           />
         )}
-         <QuestionMarkCircleIcon
-          className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
-          onClick={() => setIsInfoModalOpen(true)}
-        />
         {isDarkMode ? (
-          <EyeOffIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
+          <EyeIcon
+            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
           <EyeIcon
-            className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-white cursor-pointer"
+            className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-slate-800 cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
         <UserGroupIcon
-          className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
+          className="h-6 w-6 mr-3 cursor-pointer stroke-white dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
