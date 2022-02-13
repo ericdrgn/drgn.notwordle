@@ -1,8 +1,8 @@
 import {
-  QuestionMarkCircleIcon,
-  UserGroupIcon,
+  CodeIcon,
+  TerminalIcon,
   EyeIcon,
-  PuzzleIcon,
+  KeyIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -213,7 +213,7 @@ function App() {
           {GAME_TITLE}
         </h1>
         {isHardMode ? (
-          <PuzzleIcon
+          <KeyIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => {
               handleHardMode(!isHardMode)
@@ -222,7 +222,7 @@ function App() {
             }}
           />
         ) : (
-          <PuzzleIcon
+          <KeyIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-slate-800"
             onClick={() => {
               handleHardMode(!isHardMode)
@@ -242,7 +242,7 @@ function App() {
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <UserGroupIcon
+        <TerminalIcon
           className="h-6 w-6 mr-3 cursor-pointer stroke-white dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
@@ -286,7 +286,7 @@ function App() {
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
         onClick={() => setIsInfoModalOpen(true)}
       >
-          <QuestionMarkCircleIcon
+          <KeyIcon
                     className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
