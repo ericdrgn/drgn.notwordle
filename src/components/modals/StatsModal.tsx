@@ -61,7 +61,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5><a href="https://wordler.space" className="underline font-bold">return</a> {NEW_WORD_TEXT} <a href={`https://www.merriam-webster.com/dictionary/${solution}`} target="_blank" rel="noreferrer" className="underline font-bold">definition</a></h5>
+            <h5><a href="https://wordler.space" className="underline font-bold">return</a> {NEW_WORD_TEXT} <a href={`https://urbandictionary.com/${solution}`} target="_blank" rel="noreferrer" className="underline font-bold">definition</a></h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
@@ -70,7 +70,7 @@ export const StatsModal = ({
           </div>
           <button
             type="button"
-            className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black dark:border-white sm:text-sm"
+            className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
             onClick={() => {
               shareStatus(guesses, isGameLost, isHardMode)
               handleShare()
