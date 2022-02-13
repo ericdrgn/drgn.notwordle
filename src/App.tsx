@@ -17,7 +17,6 @@ import {
   GAME_TITLE,
   WIN_MESSAGES,
   GAME_COPIED_MESSAGE,
-  ABOUT_GAME_MESSAGE,
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
@@ -291,9 +290,11 @@ function App() {
       <button
         type="button"
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black select-none"
-        onClick={() => setIsAboutModalOpen(true)}
+        onClick={() => setIsInfoModalOpen(true)}
       >
-        {ABOUT_GAME_MESSAGE}
+          <QuestionMarkCircleIcon
+                    className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+                  />
       </button>
 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
