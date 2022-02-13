@@ -286,7 +286,7 @@ function App() {
         className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
         onClick={() => setIsInfoModalOpen(true)}
       >
-          <KeyIcon
+          <CodeIcon
                     className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
