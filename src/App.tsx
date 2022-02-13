@@ -220,12 +220,20 @@ function App() {
         {isHardMode ? (
           <ExclamationIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(EASY_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         ) : (
           <CakeIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(EASY_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         )}
         {isDarkMode ? (
