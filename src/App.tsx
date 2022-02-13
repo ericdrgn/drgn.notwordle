@@ -3,8 +3,8 @@ import {
   ChartBarIcon,
   EyeOffIcon,
   EyeIcon,
-  CakeIcon,
-  ExclamationIcon,
+  ViewGridAddIcon,
+  ViewGridIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -216,7 +216,7 @@ function App() {
           {GAME_TITLE}
         </h1>
         {isHardMode ? (
-          <ExclamationIcon
+          <ViewGridAddIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => {
               handleHardMode(!isHardMode)
@@ -225,7 +225,7 @@ function App() {
             }}
           />
         ) : (
-          <CakeIcon
+          <ViewGridIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => {
               handleHardMode(!isHardMode)
