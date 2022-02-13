@@ -3,8 +3,8 @@ export const GAME_TITLE = 'wordle'
 export const WIN_MESSAGES = ['are you... the one?', 'wordle, meet your maker', 'is this your world? do we just live in it?']
 export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'about'
-export const NOT_ENOUGH_LETTERS_MESSAGE = 'wrong letter'
-export const WORD_NOT_FOUND_MESSAGE = 'letter not found'
+export const NOT_ENOUGH_LETTERS_MESSAGE = 'try harder'
+export const WORD_NOT_FOUND_MESSAGE = 'unknown word'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
   `the letter was ${solution}`
 export const ENTER_TEXT = 'enter'
