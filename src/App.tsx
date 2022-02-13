@@ -21,6 +21,8 @@ import {
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
+  HARD_MODE,
+  EASY_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -219,19 +221,21 @@ function App() {
         />
         {isHardMode ? (
           <ExclamationIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(EASY_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         ) : (
           <CakeIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
-            onClick={() => handleHardMode(!isHardMode)}
-          />
-        )}
-        {isDarkMode ? (
-          <EyeOffIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
-            onClick={() => handleDarkMode(!isDarkMode)}
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(HARD_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         ) : (
           <EyeIcon
