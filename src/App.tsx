@@ -4,7 +4,7 @@ import {
   EyeOffIcon,
   EyeIcon,
   CakeIcon,
-  AcademicCapIcon,
+  ExclamationIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -214,7 +214,7 @@ function App() {
           {GAME_TITLE}
         </h1>
         {isHardMode ? (
-          <AcademicCapIcon
+          <ExclamationIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => handleHardMode(!isHardMode)}
           />
