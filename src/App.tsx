@@ -108,8 +108,8 @@ function App() {
   const handleHardMode = (isHard: boolean) => {
     setIsHardMode(isHard)
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
-    setSuccessAlert(HARD_MODE)
-    return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+    setMinimalAlert(HARD_MODE)
+    return setTimeout(() => setMinimalAlert(''), ALERT_TIME_MS)
   }
 
   useEffect(() => {
