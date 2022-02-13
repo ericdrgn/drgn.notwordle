@@ -16,35 +16,35 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="D" status="correct" />
-        <Cell value="R" />
-        <Cell value="A" />
-        <Cell value="G" />
-        <Cell value="O" />
-        <Cell value="N" />
+        <Cell value="R" status="absent" />
+        <Cell value="A" status="absent" />
+        <Cell value="G" status="absent" />
+        <Cell value="O" status="absent" />
+        <Cell value="N" status="absent" />
       </div>
       <p className="text-sm text-white dark:text-white">
         the letter D is in the word and in the correct spot
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="W" />
-        <Cell value="Y" />
+        <Cell value="W" status="absent" />
+        <Cell value="Y" status="absent" />
         <Cell value="V" status="present" />
-        <Cell value="E" />
-        <Cell value="R" />
-        <Cell value="N" />
+        <Cell value="E" status="absent" />
+        <Cell value="R" status="absent" />
+        <Cell value="N" status="absent" />
       </div>
       <p className="text-sm text-white dark:text-white">
         the letter V is in the word but in the wrong spot
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="W" />
-        <Cell value="O" />
-        <Cell value="R" />
+        <Cell value="W" status="correct" />
+        <Cell value="O" status="correct" />
+        <Cell value="R" status="correct" />
         <Cell value="D" status="absent" />
-        <Cell value="L" />
-        <Cell value="E" />
+        <Cell value="L" status="correct" />
+        <Cell value="E" status="correct" />
       </div>
       <p className="text-sm text-white dark:text-white">
         the letter D is not in the word in any spot
