@@ -213,21 +213,21 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        <InformationCircleIcon
-          className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
-          onClick={() => setIsInfoModalOpen(true)}
-        />
         {isHardMode ? (
           <AcademicCapIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => handleHardMode(!isHardMode)}
           />
         ) : (
           <CakeIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-white dark:stroke-black"
             onClick={() => handleHardMode(!isHardMode)}
           />
         )}
+         <InformationCircleIcon
+          className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
+          onClick={() => setIsInfoModalOpen(true)}
+        />
         {isDarkMode ? (
           <MinusCircleIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
