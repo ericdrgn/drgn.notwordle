@@ -22,6 +22,7 @@ import {
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
   HARD_MODE,
+  EASY_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -109,6 +110,8 @@ function App() {
   const handleHardMode = (isHard: boolean) => {
     setIsHardMode(isHard)
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+    setSuccessAlert(HARD_MODE) : setSuccessAlert(EASY_MODE)
+    return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
   }
 
   useEffect(() => {
@@ -217,9 +220,7 @@ function App() {
         {isHardMode ? (
           <ExclamationIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
-            onClick={() => handleHardMode(!isHardMode)
-            setSuccessAlert(HARD_MODE)
-            return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)}
+            onClick={() => handleHardMode(!isHardMode)}
           />
         ) : (
           <CakeIcon
