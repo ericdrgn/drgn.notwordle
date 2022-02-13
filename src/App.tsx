@@ -1,8 +1,8 @@
 import {
   CodeIcon,
   TerminalIcon,
-  AdjustmentsIcon,
-  ViewGridIcon,
+  EyeOffIcon,
+  EyeIcon,
   KeyIcon,
   LightningBoltIcon,
 } from '@heroicons/react/outline'
@@ -229,12 +229,12 @@ function App() {
           />
         )}
         {isDarkMode ? (
-          <AdjustmentsIcon
+          <EyeOffIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
-          <ViewGridIcon
+          <EyeIcon
             className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-white cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
