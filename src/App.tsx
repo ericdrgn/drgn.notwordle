@@ -220,7 +220,7 @@ function App() {
           />
         ) : (
           <CakeIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-white dark:stroke-black"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => handleHardMode(!isHardMode)}
           />
         )}
