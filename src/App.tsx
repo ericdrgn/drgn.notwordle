@@ -1,10 +1,8 @@
 import {
-  CodeIcon,
-  TerminalIcon,
-  EyeOffIcon,
+  QuestionMarkCircleIcon,
+  UserGroupIcon,
   EyeIcon,
-  KeyIcon,
-  LightningBoltIcon,
+  PuzzleIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -17,7 +15,6 @@ import {
   GAME_TITLE,
   WIN_MESSAGES,
   GAME_COPIED_MESSAGE,
-  ABOUT_GAME_MESSAGE,
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
@@ -215,13 +212,9 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        <CodeIcon
-          className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
-          onClick={() => setIsInfoModalOpen(true)}
-        />
         {isHardMode ? (
-          <LightningBoltIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
+          <PuzzleIcon
+            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => {
               handleHardMode(!isHardMode)
               setSuccessAlert(EASY_MODE)
@@ -229,8 +222,8 @@ function App() {
             }}
           />
         ) : (
-          <KeyIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
+          <PuzzleIcon
+            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-slate-800"
             onClick={() => {
               handleHardMode(!isHardMode)
               setSuccessAlert(HARD_MODE)
@@ -239,18 +232,18 @@ function App() {
           />
         )}
         {isDarkMode ? (
-          <EyeOffIcon
-            className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
+          <EyeIcon
+            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
           <EyeIcon
-            className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-white cursor-pointer"
+            className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-slate-800 cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <TerminalIcon
-          className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
+        <UserGroupIcon
+          className="h-6 w-6 mr-3 cursor-pointer stroke-white dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
       </div>
@@ -290,10 +283,12 @@ function App() {
 
       <button
         type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black select-none"
-        onClick={() => setIsAboutModalOpen(true)}
+        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
+        onClick={() => setIsInfoModalOpen(true)}
       >
-        {ABOUT_GAME_MESSAGE}
+          <QuestionMarkCircleIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                  />
       </button>
 
       <Alert message={NOT_ENOUGH_LETTERS_MESSAGE} isOpen={isNotEnoughLetters} />
