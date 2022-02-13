@@ -1,6 +1,6 @@
 import {
   QuestionMarkCircleIcon,
-  MenuIcon,
+  UserGroupIcon,
   EyeOffIcon,
   EyeIcon,
   ViewGridAddIcon,
@@ -249,7 +249,7 @@ function App() {
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <MenuIcon
+        <UserGroupIcon
           className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
