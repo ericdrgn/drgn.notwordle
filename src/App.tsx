@@ -222,7 +222,6 @@ function App() {
         ) : (
           <CakeIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
-            onClick={() => handleHardMode(!isHardMode)}
             onClick={() => {
               setSuccessAlert(HARD_MODE)
               return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
