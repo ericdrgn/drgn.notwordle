@@ -18,10 +18,10 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
         and{' '}
         <a
-          href="https://www.powerlanguage.co.uk/wordle/"
+          href="https://wordler.space"
           className="underline font-bold"
         >
-          play the original here
+          play other versions here
         </a>{' '}
       </p>
     </BaseModal>
