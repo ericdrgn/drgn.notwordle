@@ -1,3 +1,6 @@
+import {
+  ShareIcon,
+} from '@heroicons/react/outline'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
@@ -74,7 +77,9 @@ export const StatsModal = ({
               handleShare()
             }}
           >
-            {SHARE_TEXT}
+          <ShareIcon
+                    className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+                  />
           </button>
         </div>
       )}
