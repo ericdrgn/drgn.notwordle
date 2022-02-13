@@ -20,6 +20,8 @@ import {
   CORRECT_WORD_MESSAGE,
   HARD_MODE,
   EASY_MODE,
+  FOCUS_MODE,
+  VIS_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
