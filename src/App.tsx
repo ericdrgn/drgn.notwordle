@@ -1,5 +1,5 @@
 import {
-  InformationCircleIcon,
+  QuestionMarkCircleIcon,
   ChartSquareBarIcon,
   EyeOffIcon,
   EyeIcon,
@@ -224,7 +224,7 @@ function App() {
             onClick={() => handleHardMode(!isHardMode)}
           />
         )}
-         <InformationCircleIcon
+         <QuestionMarkCircleIcon
           className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
