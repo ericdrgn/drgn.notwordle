@@ -226,6 +226,7 @@ function App() {
               handleHardMode(!isHardMode)
               setSuccessAlert(EASY_MODE)
               return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         ) : (
           <CakeIcon
@@ -234,6 +235,7 @@ function App() {
               handleHardMode(!isHardMode)
               setSuccessAlert(HARD_MODE)
               return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+            }}
           />
         )}
         {isDarkMode ? (
