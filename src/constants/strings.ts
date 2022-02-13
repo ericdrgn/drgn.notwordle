@@ -1,7 +1,7 @@
 export const GAME_TITLE = 'extremele'
 
 export const WIN_MESSAGES = ['are you... the one?', 'extreme for sure, but you did it', 'is this your world? do we just live in it?']
-export const GAME_COPIED_MESSAGE = 'game copied to clipboard'
+export const GAME_COPIED_MESSAGE = 'grid copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'about'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'try harder'
 export const WORD_NOT_FOUND_MESSAGE = 'unknown word'
