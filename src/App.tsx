@@ -1,6 +1,6 @@
 import {
   InformationCircleIcon,
-  ShareIcon,
+  ChartSquareBarIcon,
   MinusCircleIcon,
   PlusCircleIcon,
   CakeIcon,
@@ -239,7 +239,7 @@ function App() {
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <ShareIcon
+        <ChartSquareBarIcon
           className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
