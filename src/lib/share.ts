@@ -9,7 +9,7 @@ export const shareStatus = (
 ) => {
   navigator.clipboard.writeText(
     `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6${
-      isHardMode ? '*' : ''
+      isHardMode ? '*' : '*'
     }\n` + generateEmojiGrid(guesses)
   )
 }
