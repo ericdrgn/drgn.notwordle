@@ -1,5 +1,5 @@
 import {
-  InformationCircleIcon,
+  QuestionMarkCircleIcon,
   ChartSquareBarIcon,
   EyeOffIcon,
   EyeIcon,
@@ -213,7 +213,7 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        <InformationCircleIcon
+        <QuestionMarkCircleIcon
           className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
