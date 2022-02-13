@@ -1,10 +1,10 @@
 import {
-  InformationCircleIcon,
-  ShareIcon,
-  MinusCircleIcon,
-  PlusCircleIcon,
-  CakeIcon,
-  AcademicCapIcon,
+  CodeIcon,
+  TerminalIcon,
+  AdjustmentsIcon,
+  ViewGridIcon,
+  KeyIcon,
+  LightningBoltIcon,
 } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { Alert } from './components/alerts/Alert'
@@ -213,33 +213,33 @@ function App() {
         <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        <InformationCircleIcon
+        <CodeIcon
           className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsInfoModalOpen(true)}
         />
         {isHardMode ? (
-          <AcademicCapIcon
+          <LightningBoltIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
             onClick={() => handleHardMode(!isHardMode)}
           />
         ) : (
-          <CakeIcon
+          <KeyIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-white dark:stroke-white"
             onClick={() => handleHardMode(!isHardMode)}
           />
         )}
         {isDarkMode ? (
-          <MinusCircleIcon
+          <AdjustmentsIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         ) : (
-          <PlusCircleIcon
+          <ViewGridIcon
             className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-white cursor-pointer"
             onClick={() => handleDarkMode(!isDarkMode)}
           />
         )}
-        <ShareIcon
+        <TerminalIcon
           className="h-6 w-6 mr-3 cursor-pointer stroke-slate-800 dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
