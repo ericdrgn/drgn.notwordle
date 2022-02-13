@@ -18,10 +18,10 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>{' '}
         and{' '}
         <a
-          href="https://wordle.drgn.app"
+          href="https://wordler.space"
           className="underline font-bold"
         >
-          play not wordle here
+          play other versions here
         </a>{' '}
       </p>
     </BaseModal>
