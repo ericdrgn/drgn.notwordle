@@ -21,6 +21,8 @@ import {
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
+  HARD_MODE,
+  EASY_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
