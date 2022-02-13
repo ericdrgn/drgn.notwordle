@@ -10,7 +10,7 @@ export const CORRECT_WORD_MESSAGE = (solution: string) =>
 export const ENTER_TEXT = 'enter'
 export const DELETE_TEXT = 'delete'
 export const STATISTICS_TITLE = 'statistics'
-export const GUESS_DISTRIBUTION_TEXT = 'winning rows'
+export const GUESS_DISTRIBUTION_TEXT = ''
 export const NEW_WORD_TEXT = 'or'
 export const SHARE_TEXT = 'copy'
 export const TOTAL_TRIES_TEXT = 'attempts'
