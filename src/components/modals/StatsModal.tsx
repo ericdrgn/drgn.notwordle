@@ -77,7 +77,7 @@ export const StatsModal = ({
             }}
           >
           <ShareIcon
-                    className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
           </button>
         </div>
