@@ -22,6 +22,7 @@ import {
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
   HARD_MODE,
+  EASY_MODE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -217,7 +218,10 @@ function App() {
         {isHardMode ? (
           <ExclamationIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
-            onClick={() => handleHardMode(!isHardMode)}
+            onClick={() => {
+              handleHardMode(!isHardMode)
+              setSuccessAlert(EASY_MODE)
+              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
           />
         ) : (
           <CakeIcon
