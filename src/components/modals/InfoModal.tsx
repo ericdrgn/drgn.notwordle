@@ -7,6 +7,7 @@ type Props = {
   handleClose: () => void
 }
 
+const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="how to play" isOpen={isOpen} handleClose={handleClose}>
