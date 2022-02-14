@@ -121,11 +121,11 @@ function App() {
     if (guesses.length === 0|| localStorage.getItem('gameMode') === 'hard') {
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
       setIsHardMode(isHard)
+      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
       setIsHardModeOpen(true)
       return setTimeout(() => {
         setIsHardModeOpen(false)
       }, ALERT_TIME_MS)
-      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
     } else {
       setIsHardModeAlertOpen(true)
       return setTimeout(() => {
