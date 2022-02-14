@@ -1,5 +1,4 @@
 export const GAME_TITLE = 'luckle'
-
 export const WIN_MESSAGES = ['you ARE the one', 'you are one lucky ducky', 'wow... just WOW']
 export const GAME_COPIED_MESSAGE = 'grid copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'about'
@@ -19,5 +18,5 @@ export const CURRENT_STREAK_TEXT = 'streak'
 export const BEST_STREAK_TEXT = 'best streak'
 export const HARD_MODE = 'now in hard mode'
 export const EASY_MODE = 'now in easy mode'
-export const FOCUS_MODE = 'now in focus mode'
-export const VIS_MODE = 'now in high visibility mode'
+export const FOCUS_MODE = 'now using minimal interface'
+export const VIS_MODE = 'now using standard interface'
