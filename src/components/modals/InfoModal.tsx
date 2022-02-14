@@ -15,7 +15,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="what is drudgele?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
-        you will have ten guesses to hack the six character password of the day. when a password is guessed
+        you will have eight attempts to hack the six character password of the day. when a password is guessed
         the colors of the characters will change to reflect positions for the correct password. keep in mind
         all guesses must be passwords, normal words won't always work
       </p>
