@@ -331,7 +331,7 @@ function App() {
       />
       <Alert
         message={HARD_MODE_ALERT_MESSAGE}
-        isOpen={isHardModeAlertModalOpen}
+        isOpen={isHardModeAlertOpen}
       />
       <Alert
         message={successAlert}
