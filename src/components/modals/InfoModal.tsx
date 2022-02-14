@@ -35,7 +35,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
-        toggles on/off a hard mode that forces you to use all discovered letters
+        toggles a hard mode that forces use of all discovered letters
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <EyeIcon
@@ -43,7 +43,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
-        toggles on/off the grid 
+        toggles a minimal mode for focus and the standard grid
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <UserGroupIcon
