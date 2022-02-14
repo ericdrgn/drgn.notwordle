@@ -1,5 +1,4 @@
 export const GAME_TITLE = 'drudgele'
-
 export const WIN_MESSAGES = ['echo the truest hackerman', 'echo is hacking in your blood?', 'root@drudgle:~$']
 export const GAME_COPIED_MESSAGE = 'xclip -sel c'
 export const ABOUT_GAME_MESSAGE = 'source'
@@ -19,5 +18,5 @@ export const CURRENT_STREAK_TEXT = 'hack streak'
 export const BEST_STREAK_TEXT = 'best streak'
 export const HARD_MODE = 'now in god mode'
 export const EASY_MODE = 'now in n00b mode'
-export const FOCUS_MODE = 'now in focus mode'
-export const VIS_MODE = 'now in high visibility mode'
+export const FOCUS_MODE = 'now using hacker interface'
+export const VIS_MODE = 'now using n00b interface'
