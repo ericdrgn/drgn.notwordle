@@ -57,7 +57,7 @@ function App() {
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
-  const [isHardModeOpen, setIsHardModeOpen] = useState('')
+  const [isHardModeOpen, setIsHardModeOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
@@ -338,6 +338,7 @@ function App() {
       />
       <Alert
         message={HARD_MODE}
+        variant="success"
         isOpen={isHardModeOpen}
       />
       <Alert
