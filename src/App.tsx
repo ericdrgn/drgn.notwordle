@@ -18,10 +18,11 @@ import {
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
-  HARD_MODE,
   EASY_MODE,
+  HARD_MODE,
   FOCUS_MODE,
   VIS_MODE,
+  HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -55,6 +56,8 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
+  const [isHardModeOpen, setIsHardModeOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
@@ -100,7 +103,7 @@ function App() {
       setIsInfoModalOpen(true)
     }
   }, [])
-  
+
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
@@ -115,8 +118,20 @@ function App() {
   }
 
   const handleHardMode = (isHard: boolean) => {
-    setIsHardMode(isHard)
+    if (guesses.length === 0|| localStorage.getItem('gameMode') === 'hard') {
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+      setIsHardMode(isHard)
+      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+      setIsHardModeOpen(true)
+      return setTimeout(() => {
+        setIsHardModeOpen(false)
+      }, ALERT_TIME_MS)
+    } else {
+      setIsHardModeAlertOpen(true)
+      return setTimeout(() => {
+        setIsHardModeAlertOpen(false)
+      }, ALERT_TIME_MS)
+    }
   }
 
   useEffect(() => {
@@ -236,8 +251,6 @@ function App() {
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-slate-800"
             onClick={() => {
               handleHardMode(!isHardMode)
-              setSuccessAlert(HARD_MODE)
-              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
             }}
           />
         )}
@@ -318,6 +331,15 @@ function App() {
       <Alert
         message={CORRECT_WORD_MESSAGE(solution)}
         isOpen={isGameLost && !isRevealing}
+      />
+      <Alert
+        message={HARD_MODE_ALERT_MESSAGE}
+        isOpen={isHardModeAlertOpen}
+      />
+      <Alert
+        message={HARD_MODE}
+        variant="success"
+        isOpen={isHardModeOpen}
       />
       <Alert
         message={successAlert}
