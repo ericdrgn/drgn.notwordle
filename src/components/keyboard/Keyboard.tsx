@@ -41,7 +41,7 @@ export const Keyboard = ({
         onDelete()
       } else {
         const key = e.key.toUpperCase()
-        if (key.length === 1 && key >= '1' && key <= 'Z') {
+        if (key.length === 1 && key >= '0' && key <= 'Z') {
           onChar(key)
         }
       }
