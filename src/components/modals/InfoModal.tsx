@@ -61,7 +61,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </div>
       <p className="text-sm text-white dark:bg-black dark:text-white">
         <a
-          href="https://github.com/ericdrgn/drgn.notwordle/tree/extremele"
+          href="https://github.com/ericdrgn/drgn.notwordle/tree/recurrle"
           className="underline font-bold"
         >
           source
