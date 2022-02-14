@@ -12,7 +12,7 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="what is extremele?" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="what is luckle?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
         you will have six guesses to get the letterle of the day. not hard, but you need luck!
       </p>
