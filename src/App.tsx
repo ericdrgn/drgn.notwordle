@@ -18,7 +18,6 @@ import {
   NOT_ENOUGH_LETTERS_MESSAGE,
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
-  HARD_MODE,
   EASY_MODE,
   FOCUS_MODE,
   VIS_MODE,
@@ -246,8 +245,6 @@ function App() {
             className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-slate-800"
             onClick={() => {
               handleHardMode(!isHardMode)
-              setSuccessAlert(HARD_MODE)
-              return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
             }}
           />
         )}
