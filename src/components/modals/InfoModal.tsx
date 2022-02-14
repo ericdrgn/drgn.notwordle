@@ -22,11 +22,10 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="E" status="absent" />
       </div>
       <p className="text-sm text-white dark:text-white">
-        the letter F is perfectly placed, letters L, M, and E are not in the word, and the letter A is in the word, but is in the wrong spot
+        the letter F is perfectly placed. letters L, M, and E are not in the word. the letter A is in the word, but is in the wrong spot
       </p>
-      
+      <br>
       <p className="text-sm text-white dark:bg-black dark:text-white">
-         \n this is an opinionated fork of an open source source clone of the game wordle -{' '}
         <a
           href="https://github.com/ericdrgn/drgn.notwordle"
           className="underline font-bold"
