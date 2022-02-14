@@ -8,7 +8,7 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="how to play" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="what is wordle?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
         you will have six guesses to get the wordle of the day. when a word is guessed
         the colors of the letters will change to reflect positions for the correct word.
@@ -24,7 +24,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-white dark:text-white">
         the letter F is perfectly placed. letters L, M, and E are not in the word. the letter A is in the word, but is in the wrong spot
       </p>
-      <br>
+
       <p className="text-sm text-white dark:bg-black dark:text-white">
         <a
           href="https://github.com/ericdrgn/drgn.notwordle"
