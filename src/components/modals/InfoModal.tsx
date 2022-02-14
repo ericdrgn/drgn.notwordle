@@ -28,15 +28,17 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </div>
       <p className="text-sm text-white dark:text-white">
         the letter F is perfectly placed. letters L, M, and E are not in the word. the letter A is in the word, but is in the wrong spot
+      <div className="flex justify-center mb-1 mt-4">
       </p>
           <PuzzleIcon
-                    className="flex justify-center mb-1 mt-4 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
+      </div>
       <p className="text-sm text-white dark:text-white">
         toggles on/off a hard mode that forces you to use any discovered letters
       </p>
           <EyeIcon
-                    className="h-6 w-6 mr-1 justify-center cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
       <p className="text-sm text-white dark:text-white">
         toggles on/off the grid 
