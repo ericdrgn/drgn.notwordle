@@ -13,7 +13,7 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="what is extremele?" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="what is recurrle?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
         you will have six guesses to get the six letter wordle of the day. when a word is guessed
         the colors of the letters will change to reflect positions for the correct word
