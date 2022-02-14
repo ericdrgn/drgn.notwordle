@@ -51,8 +51,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
-        shows stats before game completion. on game completion it will show a link to return to wordler.space, a link to the wordle's definition,
-        a countdown to the next word, and a button to copy a shareable grid to your clipboard.
+        shows personal stats and other relevant info
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <UserGroupIcon
