@@ -16,7 +16,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
     <BaseModal title="what is wordle?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
         you will have six guesses to get the wordle of the day. when a word is guessed
-        the colors of the letters will change to reflect positions for the correct word.
+        the colors of the letters will change to reflect positions for the correct word
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
