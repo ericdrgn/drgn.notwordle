@@ -1,5 +1,10 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
+import {
+  UserGroupIcon,
+  EyeIcon,
+  PuzzleIcon,
+} from '@heroicons/react/outline'
 
 type Props = {
   isOpen: boolean
@@ -24,7 +29,15 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="text-sm text-white dark:text-white">
         the letter F is perfectly placed. letters L, M, and E are not in the word. the letter A is in the word, but is in the wrong spot
       </p>
-
+          <PuzzleIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                  />
+          <EyeIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                  />
+          <UserGroupIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                  />
       <p className="text-sm text-white dark:bg-black dark:text-white">
         <a
           href="https://github.com/ericdrgn/drgn.notwordle"
