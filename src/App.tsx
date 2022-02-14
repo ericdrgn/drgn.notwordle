@@ -330,6 +330,10 @@ function App() {
         isOpen={isGameLost && !isRevealing}
       />
       <Alert
+        message={HARD_MODE_ALERT_MESSAGE}
+        isOpen={isHardModeAlertModalOpen}
+      />
+      <Alert
         message={successAlert}
         isOpen={successAlert !== ''}
         variant="success"
