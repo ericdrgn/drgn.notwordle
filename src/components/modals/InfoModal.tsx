@@ -31,7 +31,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <PuzzleIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 stroke-white dark:stroke-white"
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
@@ -39,7 +39,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <EyeIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 stroke-white dark:stroke-white"
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
@@ -47,16 +47,18 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <UserGroupIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 stroke-white dark:stroke-white"
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
         shows stats before game completion. on game completion it will show a link to return to wordler.space, a link to the wordle's definition,
         a countdown to the next word, and a button to copy a shareable grid to your clipboard.
       </p>
-      <p className="text-sm text-white dark:text-white">
-
-      </p>
+      <div className="flex justify-center mb-1 mt-4">
+          <UserGroupIcon
+                    className="h-6 w-6 mr-1 stroke-black dark:stroke-black"
+                  />
+      </div>
       <p className="text-sm text-white dark:bg-black dark:text-white">
         <a
           href="https://github.com/ericdrgn/drgn.notwordle"
