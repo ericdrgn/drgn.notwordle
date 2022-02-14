@@ -17,34 +17,28 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="F" status="correct" />
         <Cell value="L" status="absent" />
-        <Cell value="A" status="absent" />
+        <Cell value="A" status="present" />
         <Cell value="M" status="absent" />
         <Cell value="E" status="absent" />
       </div>
       <p className="text-sm text-white dark:text-white">
-        the letter F is in the word and in the correct spot
+        the letter F is perfectly placed, letters L, M, and E are not in the word, and the letter A is in the word in the wrong spot
       </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="T" status="absent" />
-        <Cell value="A" status="absent" />
-        <Cell value="L" status="present" />
-        <Cell value="O" status="absent" />
-        <Cell value="N" status="absent" />
-      </div>
-      <p className="text-sm text-white dark:text-white">
-        the letter L is in the word but in the wrong spot
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="W" status="absent" />
-        <Cell value="I" status="correct" />
-        <Cell value="N" status="correct" />
-        <Cell value="G" status="correct" />
-        <Cell value="S" status="correct" />
-      </div>
-      <p className="text-sm text-white dark:text-white">
-        the letter W is not in the word in any spot
+      <p className="text-sm text-white dark:bg-black dark:text-white">
+         this is an opinionated fork of an open source source clone of the game wordle -{' '}
+        <a
+          href="https://github.com/ericdrgn/drgn.notwordle"
+          className="underline font-bold"
+        >
+          check out the code here
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://wordler.space"
+          className="underline font-bold"
+        >
+          play other versions here
+        </a>{' '}
       </p>
     </BaseModal>
   )
