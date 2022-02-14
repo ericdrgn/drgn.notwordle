@@ -51,7 +51,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
-        shows personal stats and other relevant info
+        shows personal stats and helpful navigation links
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <UserGroupIcon
