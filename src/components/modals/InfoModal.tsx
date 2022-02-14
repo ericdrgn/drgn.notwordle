@@ -1,5 +1,10 @@
 import { Cell } from '../grid/Cell'
 import { BaseModal } from './BaseModal'
+import {
+  UserGroupIcon,
+  EyeIcon,
+  PuzzleIcon,
+} from '@heroicons/react/outline'
 
 type Props = {
   isOpen: boolean
@@ -8,49 +13,67 @@ type Props = {
 
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
-    <BaseModal title="how to play" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="what is extremele?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
-        guess the word in 6 tries. after each guess, the color of the tiles will
-        change to show how close your guess was to the word.
-      </p>
-
-      <div className="flex justify-center mb-1 mt-4">
-        <Cell value="D" status="correct" />
-        <Cell value="R" status="absent" />
-        <Cell value="A" status="absent" />
-        <Cell value="G" status="absent" />
-        <Cell value="O" status="absent" />
-        <Cell value="N" status="absent" />
-        <Cell value="S" status="absent" />
-      </div>
-      <p className="text-sm text-white dark:text-white">
-        the letter D is in the word and in the correct spot
+        you will have six guesses to get the seven letter wordle of the day. when a word is guessed
+        the colors of the letters will change to reflect positions for the correct word.
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="W" status="absent" />
         <Cell value="Y" status="absent" />
-        <Cell value="V" status="present" />
+        <Cell value="V" status="absent" />
         <Cell value="E" status="absent" />
-        <Cell value="R" status="absent" />
-        <Cell value="N" status="absent" />
-        <Cell value="S" status="absent" />
+        <Cell value="R" status="present" />
+        <Cell value="N" status="correct" />
+        <Cell value="S" status="correct" />
       </div>
       <p className="text-sm text-white dark:text-white">
-        the letter V is in the word but in the wrong spot
+        the letters N & S are perfectly placed. letters W, Y, V, and E are not in the word. the letter R is in the word, but is in the wrong spot
       </p>
-
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="E" status="correct" />
-        <Cell value="X" status="correct" />
-        <Cell value="T" status="correct" />
-        <Cell value="R" status="absent" />
-        <Cell value="E" status="correct" />
-        <Cell value="M" status="correct" />
-        <Cell value="E" status="correct" />
+          <PuzzleIcon
+                    className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
+                  />
       </div>
       <p className="text-sm text-white dark:text-white">
-        the letter R is not in the word in any spot
+        toggles a hard mode that forces use of all discovered letters
+      </p>
+      <div className="flex justify-center mb-1 mt-4">
+          <EyeIcon
+                    className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
+                  />
+      </div>
+      <p className="text-sm text-white dark:text-white">
+        toggles a mode with a minimal interface
+      </p>
+      <div className="flex justify-center mb-1 mt-4">
+          <UserGroupIcon
+                    className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
+                  />
+      </div>
+      <p className="text-sm text-white dark:text-white">
+        shows personal stats and helpful navigation links
+      </p>
+      <div className="flex justify-center mb-1 mt-4">
+          <UserGroupIcon
+                    className="h-6 w-6 mr-0 stroke-black dark:stroke-black"
+                  />
+      </div>
+      <p className="text-sm text-white dark:bg-black dark:text-white">
+        <a
+          href="https://github.com/ericdrgn/drgn.notwordle/tree/extremele"
+          className="underline font-bold"
+        >
+          source
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://wordler.space"
+          className="underline font-bold"
+        >
+          other versions
+        </a>{' '}
       </p>
     </BaseModal>
   )
