@@ -43,7 +43,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   />
       </div>
       <p className="text-sm text-white dark:text-white">
-        toggles a minimal mode for focus and the standard grid
+        toggles a mode with a minimal interface
       </p>
       <div className="flex justify-center mb-1 mt-4">
           <UserGroupIcon
