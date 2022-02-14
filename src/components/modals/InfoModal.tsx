@@ -30,22 +30,23 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         the letter F is perfectly placed. letters L, M, and E are not in the word. the letter A is in the word, but is in the wrong spot
       </p>
           <PuzzleIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                    className="flex justify-center mb-1 mt-4 cursor-pointer stroke-white dark:stroke-white"
                   />
       <p className="text-sm text-white dark:text-white">
-        toggles hard mode on and off
+        toggles on/off a hard mode that forces you to use any discovered letters
       </p>
           <EyeIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-1 justify-center cursor-pointer stroke-white dark:stroke-white"
                   />
       <p className="text-sm text-white dark:text-white">
-        toggles a focus mode on and off
+        toggles on/off the grid 
       </p>
           <UserGroupIcon
                     className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
       <p className="text-sm text-white dark:text-white">
-        shows stats and has a button to copy a shareable grid to your clipboard
+        shows stats before game completion. on game completion it will show a link to return to wordler.space, a link to the wordle's definition,
+        a countdown to the next word, and a button to copy a shareable grid to your clipboard.
       </p>
       <p className="text-sm text-white dark:bg-black dark:text-white">
         <a
