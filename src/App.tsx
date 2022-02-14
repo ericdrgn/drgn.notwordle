@@ -130,7 +130,6 @@ function App() {
           setSuccessAlert('')
         }, ALERT_TIME_MS)
     }
-  }
 
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
