@@ -122,9 +122,8 @@ function App() {
       localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
     } else {
       setSuccessAlert(HARD_MODE_ALERT_MESSAGE)
-      return setTimeout(() => setSuccessAlert('')
-      }, ALERT_TIME_MS)
-    }
+      return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
+    }}
   }
 
   useEffect(() => {
