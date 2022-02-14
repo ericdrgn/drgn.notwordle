@@ -56,6 +56,7 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
@@ -121,15 +122,12 @@ function App() {
       setIsHardMode(isHard)
       localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
     } else {
-      setTimeout(() => {
-        setSuccessAlert(
-          HARD_MODE_ALERT_MESSAGE
-        )
-
-        setTimeout(() => {
-          setSuccessAlert('')
-        }, ALERT_TIME_MS)
-    },
+      setIsHardModeAlertOpen(true)
+      return setTimeout(() => {
+        setIsHardModeAlertOpen(false)
+      }, ALERT_TIME_MS)
+    }
+  }
 
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
