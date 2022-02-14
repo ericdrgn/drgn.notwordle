@@ -22,6 +22,7 @@ import {
   EASY_MODE,
   FOCUS_MODE,
   VIS_MODE,
+  HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
   MAX_WORD_LENGTH,
@@ -115,8 +116,15 @@ function App() {
   }
 
   const handleHardMode = (isHard: boolean) => {
-    setIsHardMode(isHard)
+    if (guesses.length === 0|| localStorage.getItem('gameMode') === 'hard') {
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+      setIsHardMode(isHard)
+      localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
+    } else {
+      setSuccessAlert(HARD_MODE_ALERT_MESSAGE)
+      return setTimeout(() => setSuccessAlert('')
+      }, ALERT_TIME_MS)
+    }
   }
 
   useEffect(() => {
