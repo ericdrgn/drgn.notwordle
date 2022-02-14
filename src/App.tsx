@@ -19,6 +19,7 @@ import {
   WORD_NOT_FOUND_MESSAGE,
   CORRECT_WORD_MESSAGE,
   EASY_MODE,
+  HARD_MODE,
   FOCUS_MODE,
   VIS_MODE,
   HARD_MODE_ALERT_MESSAGE,
@@ -56,6 +57,7 @@ function App() {
   const [isNotEnoughLetters, setIsNotEnoughLetters] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [isHardModeAlertOpen, setIsHardModeAlertOpen] = useState(false)
+  const [isHardModeOpen, setIsHardModeOpen] = useState(false)
   const [isWordNotFoundAlertOpen, setIsWordNotFoundAlertOpen] = useState(false)
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
@@ -119,6 +121,10 @@ function App() {
     if (guesses.length === 0|| localStorage.getItem('gameMode') === 'hard') {
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
       setIsHardMode(isHard)
+      setIsHardModeOpen(true)
+      return setTimeout(() => {
+        setIsHardModeOpen(false)
+      }, ALERT_TIME_MS)
       localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
     } else {
       setIsHardModeAlertOpen(true)
@@ -329,6 +335,10 @@ function App() {
       <Alert
         message={HARD_MODE_ALERT_MESSAGE}
         isOpen={isHardModeAlertOpen}
+      />
+      <Alert
+        message={HARD_MODE}
+        isOpen={isHardModeOpen}
       />
       <Alert
         message={successAlert}
