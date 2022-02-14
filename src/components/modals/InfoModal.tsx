@@ -28,8 +28,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </div>
       <p className="text-sm text-white dark:text-white">
         the letter F is perfectly placed. letters L, M, and E are not in the word. the letter A is in the word, but is in the wrong spot
-      <div className="flex justify-center mb-1 mt-4">
       </p>
+      <div className="flex justify-center mb-1 mt-4">
           <PuzzleIcon
                     className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
