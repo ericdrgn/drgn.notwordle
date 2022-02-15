@@ -18,13 +18,13 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="E" status="absent" />
+        <Cell value="E" isRevealing={true} isCompleted={true} status="absent" />
       </div>
       <p className="text-sm text-white dark:text-white">
         E is not the letter
       </p>
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="D" status="correct" />
+        <Cell value="D" isRevealing={true} isCompleted={true} status="correct" />
       </div>
       <p className="text-sm text-white dark:text-white">
         D is the letter
