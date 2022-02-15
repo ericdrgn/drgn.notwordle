@@ -2,18 +2,28 @@ import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 import { GAME_TITLE } from '../constants/strings'
 import { MAX_CHALLENGES } from '../constants/settings'
+import { isMobileBrowser } from './browser'
 
 export const shareStatus = (
   guesses: string[],
   lost: boolean,
-  isHardMode: boolean
+  isHardMode: boolean,
+  handleShareToClipboard: () => void
 ) => {
-  navigator.clipboard.writeText(
+  const textToShare =
     `${GAME_TITLE} ${solutionIndex} ${
       lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n` +
       generateEmojiGrid(guesses)
-  )
+  
+  const shareData = { text: textToShare }
+
+  if (isMobileBrowser() && navigator.canShare(shareData) && navigator.share) {
+    navigator.share(shareData)
+  } else {
+    navigator.clipboard.writeText(textToShare)
+    handleShareToClipboard()
+  }
 }
 
 export const generateEmojiGrid = (guesses: string[]) => {
