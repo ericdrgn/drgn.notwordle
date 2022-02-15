@@ -21,12 +21,12 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="H" status="correct" />
-        <Cell value="A" status="absent" />
-        <Cell value="C" status="absent" />
-        <Cell value="K" status="absent" />
-        <Cell value="3" status="present" />
-        <Cell value="R" status="correct" />
+        <Cell value="H" isRevealing={true} isCompleted={true} status="correct" />
+        <Cell value="A" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="C" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="K" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="3" isRevealing={true} isCompleted={true} status="present" />
+        <Cell value="R" isRevealing={true} isCompleted={true} status="correct" />
       </div>
       <p className="text-sm text-white dark:text-white">
         the characters H & R are perfectly placed. characters A, C, and K are not in the password. the character 3 is in the word, but is in the wrong spot
