@@ -20,12 +20,12 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="W" status="absent" />
-        <Cell value="Y" status="absent" />
-        <Cell value="V" status="absent" />
-        <Cell value="E" status="absent" />
-        <Cell value="R" status="present" />
-        <Cell value="N" status="correct" />
+        <Cell value="W" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="Y" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="V" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="E" isRevealing={true} isCompleted={true} status="absent" />
+        <Cell value="R" isRevealing={true} isCompleted={true} status="present" />
+        <Cell value="N" isRevealing={true} isCompleted={true} status="correct" />
       </div>
       <p className="text-sm text-white dark:text-white">
         the letter N is perfectly placed. letters W, Y, V, and E are not in the word. the letter R is in the word, but is in the wrong spot
