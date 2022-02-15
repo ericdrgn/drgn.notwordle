@@ -73,11 +73,10 @@ export const StatsModal = ({
             className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
             onClick={() => {
               shareStatus(
-              handleShare()
                 guesses,
                 isGameLost,
                 isHardMode,
-                handleShareToClipboard,
+                handleShareToClipboard
               )
             }}
           >
