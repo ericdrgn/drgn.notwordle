@@ -5,7 +5,7 @@ export const ABOUT_GAME_MESSAGE = 'source'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'try harder'
 export const WORD_NOT_FOUND_MESSAGE = 'permission denied'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `achieve root with ${solution}`
+  `you could have achieved root with ${solution}`
 export const ENTER_TEXT = 'enter'
 export const DELETE_TEXT = 'delete'
 export const STATISTICS_TITLE = 'times achieved root'
