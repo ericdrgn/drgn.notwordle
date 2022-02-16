@@ -261,7 +261,7 @@ function App() {
             }}
           />
         )}
-        <Terminalcon
+        <TerminalIcon
           className="h-6 w-6 mr-3 cursor-pointer stroke-white dark:stroke-white"
           onClick={() => setIsStatsModalOpen(true)}
         />
