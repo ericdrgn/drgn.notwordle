@@ -26,7 +26,6 @@ import {
 import {
   MAX_WORD_LENGTH,
   MAX_CHALLENGES,
-  ALERT_TIME_MS,
   REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
 } from './constants/settings'
