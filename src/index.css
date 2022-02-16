@@ -49,7 +49,7 @@
 }
 
 svg:hover {
-  animation: float infinite;
+  animation: float linear;
   animation-duration: var(--animation-speed);
 }
 
