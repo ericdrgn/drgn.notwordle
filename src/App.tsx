@@ -304,17 +304,17 @@ function App() {
         onClick={() => setIsInfoModalOpen(true)}
       >
           <QuestionMarkCircleIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                    className="h-6 w-6 mr-0 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
-      <div className="flex flex mx-auto items-center">
-        <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
-          {solutionIndex}
-        </h1>
-      </div>
       <div className="flex w-80 mx-auto items-center">
         <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
           {GAME_TITLE}
+        </h1>
+      </div>
+      <div className="flex flex mx-auto items-center">
+        <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
+          {solutionIndex}
         </h1>
       </div>
 
