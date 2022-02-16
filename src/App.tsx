@@ -289,10 +289,7 @@ function App() {
         gameStats={stats}
         isGameLost={isGameLost}
         isGameWon={isGameWon}
-        handleShare={() => {
-          setSuccessAlert(GAME_COPIED_MESSAGE)
-          return setTimeout(() => setSuccessAlert(''), ALERT_TIME_MS)
-        }}
+        handleShareToClipboard={() => showSuccessAlert(GAME_COPIED_MESSAGE)}
         isHardMode={isHardMode}
       />
       <AboutModal
