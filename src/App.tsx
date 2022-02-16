@@ -303,7 +303,7 @@ function App() {
         onClick={() => setIsInfoModalOpen(true)}
       >
           <CodeIcon
-                    className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
+                    className="h-6 w-6 mr-0 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
       <div className="flex w-80 mx-auto items-center">
