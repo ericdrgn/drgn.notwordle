@@ -23,12 +23,15 @@ export const Cell = ({
 
   const classes = classnames(
     'w-14 h-14 border-solid border-2 flex items-center justify-center mx-0.5 text-4xl font-bold rounded text-white dark:text-white',
+  )
+  
+  const classes = classnames(
     {
       'bg-black border-black dark:bg-black dark:border-white':
         !status,
       'border-black dark:border-slate-100': value && !status,
       'absent shadowed bg-black border-black text-slate-800 dark:bg-black dark:border-black':
-        !status === 'absent',
+        status === 'absent',
       'correct shadowed dark:border-solid dark:border-4 bg-black text-blue-500 border-black dark:bg-blue-500 dark:text-white dark:border-white':
         status === 'correct',
       'present shadowed dark:border-dashed dark:border-4 bg-black text-orange-500 border-black dark:bg-orange-500 dark:text-white dark:border-white':
