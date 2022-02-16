@@ -7,7 +7,7 @@
   --animation-speed-fast: 250ms;
   --default-cell-bg-color: theme('colors.black');
   --default-cell-border-color: theme('colors.black');
-  --default-cell-text-color: theme('colors.black');
+  --default-cell-text-color: theme('colors.white');
   --absent-cell-bg-color: theme('colors.black');
   --correct-cell-bg-color: theme('colors.black');
   --present-cell-bg-color: theme('colors.black');
@@ -48,14 +48,9 @@
   animation-fill-mode: backwards;
 }
 
-svg.cursor-pointer {
+svg:hover {
   animation: float linear;
-  transition: all var(--animation-speed-fast);
   animation-duration: var(--animation-speed);
-}
-
-svg.cursor-pointer:hover {
-  transform: scale(1.2);
 }
 
 .jiggle {
@@ -152,6 +147,18 @@ svg.cursor-pointer:hover {
 
 .shadowed {
   text-shadow: 1px 1px 1px #000000;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -0.5rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 @keyframes jiggle {
