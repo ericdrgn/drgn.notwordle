@@ -313,7 +313,7 @@ function App() {
         </h1>
       </div>
       <div className="flex flex mx-auto items-center">
-        <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
+        <h1 className="mx-auto mt-0 flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
           {solutionIndex}
         </h1>
       </div>
