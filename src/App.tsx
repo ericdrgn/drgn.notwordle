@@ -310,10 +310,10 @@ function App() {
                     className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
-        <h1 className="text-xl ml-2.5 grow font-bold dark:text-white">
+        <h1 className="mx-auto mt-8 items-center text-xl ml-2.5 grow font-bold dark:text-white">
           {GAME_TITLE}
         </h1>
-        <h1 className="text-xl ml-2.5 grow font-bold text-slate-800 dark:text-white">
+        <h1 className="mx-auto mt-8 items-center text-xl ml-2.5 grow font-bold text-slate-800 dark:text-white">
           {solutionIndex}
         </h1>
 
