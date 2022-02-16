@@ -237,7 +237,7 @@ function App() {
         </h1>
         {isHardMode ? (
           <PuzzleIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => {
               handleHardMode(!isHardMode)
               showSuccessAlert(EASY_MODE)
@@ -245,7 +245,7 @@ function App() {
           />
         ) : (
           <PuzzleIcon
-            className="h-6 w-6 mr-2 cursor-pointer stroke-slate-800 dark:stroke-slate-800"
+            className="h-6 w-6 mr-2 cursor-pointer stroke-black dark:stroke-black"
             onClick={() => {
               handleHardMode(!isHardMode)
             }}
