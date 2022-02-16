@@ -192,12 +192,12 @@ function App() {
 
     // enforce hard mode - all guesses must contain all previously revealed letters
     if (isHardMode) {
-      const firstMissingLetter = findFirstMissingLetter(currentGuess, guesses)
-      if (firstMissingLetter) {
-        setIsMissingLetterMessage(`Missing letter ${firstMissingLetter}`)
-        setIsMissingPreviousLetters(true)
+      const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
+      if (firstMissingReveal) {
+        showErrorAlert(firstMissingReveal)
+        setCurrentRowClass('jiggle')
         return setTimeout(() => {
-          setIsMissingPreviousLetters(false)
+          setCurrentRowClass('')
         }, ALERT_TIME_MS)
       }
     }
