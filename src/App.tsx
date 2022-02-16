@@ -183,7 +183,7 @@ function App() {
     if (isHardMode) {
       const firstMissingLetter = findFirstMissingLetter(currentGuess, guesses)
       if (firstMissingLetter) {
-        showErrorAlert(firstMissingReveal)
+        showErrorAlert(HARD_MODE)
         return setTimeout(() => {
         }, ALERT_TIME_MS)
       }
