@@ -230,7 +230,7 @@ function App() {
           {GAME_TITLE}
         </h1>
         <h1 className="text-xl ml-2.5 grow font-bold text-slate-800 dark:text-white">
-          ${solutionIndex}
+          {solutionIndex}
         </h1>
         {isHardMode ? (
           <PuzzleIcon
