@@ -49,7 +49,7 @@
 }
 
 svg.cursor-pointer {
-  animation: float infinite;
+  animation: float linear;
   transition: all var(--animation-speed-fast);
   animation-duration: var(--animation-speed);
 }
