@@ -8,6 +8,7 @@
   --default-cell-bg-color: theme('colors.black');
   --default-cell-border-color: theme('colors.black');
   --default-cell-text-color: theme('colors.black');
+  --absent-cell-text-color: theme('colors.slate.800');
   --absent-cell-bg-color: theme('colors.black');
   --correct-cell-bg-color: theme('colors.black');
   --present-cell-bg-color: theme('colors.black');
