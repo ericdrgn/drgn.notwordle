@@ -1,5 +1,6 @@
 import { WORDS } from '../constants/wordlist'
 import { VALID_GUESSES } from '../constants/validGuesses'
+import { WRONG_SPOT_MESSAGE, NOT_CONTAINED_MESSAGE } from '../constants/strings'
 import { getGuessStatuses } from './statuses'
 
 export const isWordInWordList = (word: string) => {
@@ -14,30 +15,45 @@ export const isWinningWord = (word: string) => {
 }
 
 // build a set of previously revealed letters - present and correct
-// force current guess to have all of them
-export const findFirstMissingLetter = (word: string, guesses: string[]) => {
-  const knownLetterSet = new Set<string>()
-  for (const guess of guesses) {
-    const statuses = getGuessStatuses(guess)
-    guess.split('').forEach((_, i) => {
-      if (statuses[i] === 'correct' || statuses[i] === 'present') {
-        knownLetterSet.add(guess[i])
-      }
-    })
+// guess must use correct letters in that space and any other revealed letters
+// also check if all revealed instances of a letter are used (i.e. two C's)
+export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
+  if (guesses.length === 0) {
+    return false
   }
 
-  for (const letter of Array.from(knownLetterSet.values())) {
-    // fail fast, always return first failed letter if applicable
-    if (!word.includes(letter)) {
-      return letter
+  const lettersLeftArray = new Array<string>()
+  const guess = guesses[guesses.length - 1]
+  const statuses = getGuessStatuses(guess)
+
+  for (let i = 0; i < guess.length; i++) {
+    if (statuses[i] === 'correct' || statuses[i] === 'present') {
+      lettersLeftArray.push(guess[i])
     }
+    if (statuses[i] === 'correct' && word[i] !== guess[i]) {
+        return WRONG_SPOT_MESSAGE(guess[i], i + 1)
+    }
+  }
+
+  // check for the first unused letter, taking duplicate letters
+  // into account - see issue #198
+  let n;
+  for (const letter of word) {
+    n = lettersLeftArray.indexOf(letter)
+    if (n !== -1) {
+      lettersLeftArray.splice(n, 1)
+    }
+  }
+
+  if (lettersLeftArray.length > 0) {
+    return NOT_CONTAINED_MESSAGE(lettersLeftArray[0])
   }
   return false
 }
 
 export const getWordOfDay = () => {
-  // Dec 31, 2021 Game Epoch to keep the day of wordle in sync with day of year
-  const epochMs = new Date('December 31, 2021 00:00:00').valueOf()
+  // December 31, 2022 Game Epoch
+  const epochMs = new Date('December 31, 2022 00:00:00').valueOf()
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
