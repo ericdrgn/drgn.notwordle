@@ -34,7 +34,7 @@ import {
   isWordInWordList,
   isWinningWord,
   solution,
-  findFirstMissingLetter,
+  findFirstUnusedReveal,
 } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
@@ -181,9 +181,9 @@ function App() {
 
     // enforce hard mode - all guesses must contain all previously revealed letters
     if (isHardMode) {
-      const firstMissingLetter = findFirstMissingLetter(currentGuess, guesses)
-      if (firstMissingLetter) {
-        showErrorAlert(HARD_MODE)
+      const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
+      if (firstMissingReveal) {
+        showErrorAlert(firstMissingReveal)
         return setTimeout(() => {
         }, ALERT_TIME_MS)
       }
