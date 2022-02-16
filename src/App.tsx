@@ -310,12 +310,14 @@ function App() {
                     className="h-6 w-6 mr-1 cursor-pointer stroke-slate-800 dark:stroke-white"
                   />
       </button>
-      <div className="flex w-80 mx-auto items-center mb-8 mt-20">
-        <h1 className="mx-auto items-center text-xl ml-2.5 grow font-bold dark:text-white">
-          {GAME_TITLE}
-        </h1>
+      <div className="flex w-80 mx-auto items-center mb-8">
         <h1 className="mx-auto items-center text-xl ml-2.5 grow font-bold text-slate-800 dark:text-white">
           {solutionIndex}
+        </h1>
+      </div>
+      <div className="flex w-80 mx-auto items-center mb-8">
+        <h1 className="mx-auto items-center text-xl ml-2.5 grow font-bold dark:text-white">
+          {GAME_TITLE}
         </h1>
       </div>
 
