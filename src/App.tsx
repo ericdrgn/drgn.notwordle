@@ -33,6 +33,7 @@ import {
   isWordInWordList,
   isWinningWord,
   solution,
+  solutionIndex,
   findFirstUnusedReveal,
 } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
