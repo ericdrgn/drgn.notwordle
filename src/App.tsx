@@ -120,7 +120,7 @@ function App() {
     localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
       setIsHardMode(isHard)
       localStorage.setItem('gameMode', isHard ? 'hard' : 'normal')
-      showErrorAlert(HARD_MODE)
+      showSuccessAlert(HARD_MODE)
     } else {
       showErrorAlert(HARD_MODE_ALERT_MESSAGE)
     }
@@ -233,7 +233,7 @@ function App() {
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => {
               handleHardMode(!isHardMode)
-              showErrorAlert(EASY_MODE)
+              showSuccessAlert(EASY_MODE)
             }}
           />
         ) : (
@@ -249,7 +249,7 @@ function App() {
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
             onClick={() => {
               handleDarkMode(!isDarkMode)
-              showErrorAlert(FOCUS_MODE)
+              showSuccessAlert(FOCUS_MODE)
             }}
           />
         ) : (
