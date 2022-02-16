@@ -226,6 +226,9 @@ function App() {
   return (
     <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-8 mt-20">
+        <h1 className="text-xl ml-2.5 grow font-bold text-black dark:text-black">
+          {GAME_TITLE}
+        </h1>
         {isHardMode ? (
           <PuzzleIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
@@ -306,10 +309,10 @@ function App() {
       </button>
       <div className="flex flex mx-auto items-center">
         <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
-          #{solutionIndex}
+          {solutionIndex}
         </h1>
       </div>
-      <div className="flex w-80 mx-auto items-center mb-8">
+      <div className="flex w-80 mx-auto items-center">
         <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
           {GAME_TITLE}
         </h1>
