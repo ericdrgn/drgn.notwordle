@@ -35,7 +35,7 @@ import {
   isWordInWordList,
   isWinningWord,
   solution,
-  findFirstMissingLetter,
+  findFirstUnusedReveal,
 } from './lib/words'
 import { addStatsForCompletedGame, loadStats } from './lib/stats'
 import {
