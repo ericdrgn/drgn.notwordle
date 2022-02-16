@@ -9,7 +9,6 @@
   --default-cell-border-color: theme('colors.black');
   --default-cell-text-color: theme('colors.white');
   --absent-cell-bg-color: theme('colors.black');
-  --absent-cell-text-color: theme('colors.slate.800');
   --correct-cell-bg-color: theme('colors.black');
   --present-cell-bg-color: theme('colors.black');
 }
@@ -64,12 +63,12 @@ svg:hover {
     transform: rotateX(0deg);
     background-color: var(--default-cell-bg-color);
     border-color: var(--default-cell-border-color);
-    color: var(--absent-cell-text-color);
+    color: var(--default-cell-text-color);
   }
   50% {
     background-color: var(--default-cell-bg-color);
     border-color: var(--default-cell-border-color);
-    color: var(--absent-cell-text-color);
+    color: var(--default-cell-text-color);
   }
   50.1% {
     background-color: var(--absent-cell-bg-color);
