@@ -48,7 +48,7 @@
   animation-fill-mode: backwards;
 }
 
-svg:hover {
+svg.cursor-pointer:hover {
   animation: float linear;
   animation-duration: var(--animation-speed);
 }
