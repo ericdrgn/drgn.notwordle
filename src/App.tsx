@@ -26,7 +26,6 @@ import {
 import {
   MAX_WORD_LENGTH,
   MAX_CHALLENGES,
-  ALERT_TIME_MS,
   REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
 } from './constants/settings'
@@ -59,6 +58,7 @@ function App() {
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
+  const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme')
@@ -125,6 +125,10 @@ function App() {
       showErrorAlert(HARD_MODE_ALERT_MESSAGE)
     }
   }
+  
+  const clearCurrentRowClass = () => {
+    setCurrentRowClass('')
+  }
 
   useEffect(() => {
     saveGameStateToLocalStorage({ guesses, solution })
@@ -168,24 +172,27 @@ function App() {
       return
     }
     if (!(currentGuess.length === MAX_WORD_LENGTH)) {
-      showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE)
-      return setTimeout(() => {
-      }, ALERT_TIME_MS)
+      setCurrentRowClass('jiggle')
+      return showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE, {
+        onClose: clearCurrentRowClass,
+      })
     }
 
     if (!isWordInWordList(currentGuess)) {
-      showErrorAlert(WORD_NOT_FOUND_MESSAGE)
-      return setTimeout(() => {
-      }, ALERT_TIME_MS)
+      setCurrentRowClass('jiggle')
+      return showErrorAlert(WORD_NOT_FOUND_MESSAGE, {
+        onClose: clearCurrentRowClass,
+      })
     }
 
     // enforce hard mode - all guesses must contain all previously revealed letters
     if (isHardMode) {
       const firstMissingReveal = findFirstUnusedReveal(currentGuess, guesses)
       if (firstMissingReveal) {
-        showErrorAlert(firstMissingReveal)
-        return setTimeout(() => {
-        }, ALERT_TIME_MS)
+        setCurrentRowClass('jiggle')
+        return showErrorAlert(firstMissingReveal, {
+          onClose: clearCurrentRowClass,
+        })
       }
     }
 
@@ -270,6 +277,7 @@ function App() {
         guesses={guesses}
         currentGuess={currentGuess}
         isRevealing={isRevealing}
+        currentRowClassName={currentRowClass}
       />
       <Keyboard
         onChar={onChar}
