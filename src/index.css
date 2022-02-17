@@ -4,10 +4,11 @@
 
 :root {
   --animation-speed: 1000ms;
+  --animation-speed-slow: 1500ms;
   --animation-speed-fast: 250ms;
   --default-cell-bg-color: theme('colors.black');
   --default-cell-border-color: theme('colors.black');
-  --default-cell-text-color: theme('colors.white');
+  --default-cell-text-color: theme('colors.black');
   --absent-cell-bg-color: theme('colors.black');
   --correct-cell-bg-color: theme('colors.black');
   --present-cell-bg-color: theme('colors.black');
@@ -15,8 +16,8 @@
 
 .dark {
   --default-cell-bg-color: theme('colors.black');
-  --default-cell-border-color: theme('colors.white');
-  --default-cell-text-color: theme('colors.white');
+  --default-cell-border-color: theme('colors.black');
+  --default-cell-text-color: theme('colors.black');
   --absent-cell-bg-color: theme('colors.black');
 }
 
@@ -49,8 +50,8 @@
 }
 
 svg.cursor-pointer:hover {
-  animation: float linear;
-  animation-duration: var(--animation-speed);
+  animation: pulse 3;
+  animation-duration: var(--animation-speed-slow);
 }
 
 .jiggle {
@@ -149,15 +150,15 @@ svg.cursor-pointer:hover {
   text-shadow: 1px 1px 1px #000000;
 }
 
-@keyframes float {
+@keyframes pulse {
   0% {
-    transform: translate(0, 0);
+    transform: scale(1);
   }
   50% {
-    transform: translate(0, -0.5rem);
+    transform: scale(1.2);
   }
   100% {
-    transform: translate(0, 0);
+    transform: scale(1);
   }
 }
 
