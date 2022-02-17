@@ -21,7 +21,7 @@ export const EASY_MODE = 'now in easy mode'
 export const FOCUS_MODE = 'now using minimal interface'
 export const VIS_MODE = 'now using standard interface'
 export const HARD_MODE_ALERT_MESSAGE =
-  'hard mode can only be enabled before first guess'
+  'enable before first guess'
 export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
   `must use ${guess} in position ${position}`
 export const NOT_CONTAINED_MESSAGE = (letter: string) =>
