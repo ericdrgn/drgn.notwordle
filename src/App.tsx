@@ -232,9 +232,7 @@ function App() {
   return (
     <div className="pt-2 pb-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
       <div className="flex w-80 mx-auto items-center mb-6 mt-4">
-        <h1 className="text-xl ml-2.5 grow font-bold text-black dark:text-black">
-          {GAME_TITLE}
-        </h1>
+              <AlertContainer />
         {isHardMode ? (
           <PuzzleIcon
             className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
@@ -320,7 +318,6 @@ function App() {
         </h1>
       </div>
 
-      <AlertContainer />
     </div>
   )
 }
