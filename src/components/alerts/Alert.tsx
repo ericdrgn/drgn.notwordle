@@ -30,7 +30,7 @@ export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Pr
       leaveTo="opacity-0"
     >
       <div className={classes}>
-        <div className="p-1">
+        <div className="p-0">
           <p className="text-sm text-center font-medium">{message}</p>
         </div>
       </div>
