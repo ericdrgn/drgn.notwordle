@@ -54,7 +54,7 @@ export const Keyboard = ({
 
   return (
     <div>
-      <div className="flex cursor-default justify-center mb-1">
+      <div className="flex justify-center mb-1">
         {['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((key) => (
           <Key
             value={key}
@@ -65,7 +65,7 @@ export const Keyboard = ({
           />
         ))}
       </div>
-      <div className="flex cursor-default justify-center mb-1">
+      <div className="flex justify-center mb-1">
         {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map((key) => (
           <Key
             value={key}
@@ -79,7 +79,7 @@ export const Keyboard = ({
       <div className="flex cursor-default justify-center">
         <Key width={65.4} status="absent" value="DELETE" onClick={onClick}>
           <BackspaceIcon
-                    className="h-6 w-6 mr-0 cursor-default stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
                   />
         </Key>
         {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
@@ -93,7 +93,7 @@ export const Keyboard = ({
         ))}
         <Key width={65.4} status="absent" value="ENTER" onClick={onClick}>
           <CheckCircleIcon
-                    className="h-6 w-6 mr-0 cursor-default stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
                   />
         </Key>
       </div>
