@@ -13,7 +13,7 @@ export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Pr
   const classes = classNames(
     'flex z-20 max-w-sm shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
     {
-      'bg-slate-800 text-white': variant === 'error',
+      'bg-black text-white': variant === 'error',
       'bg-black text-white': variant === 'success',
     }
   )
@@ -30,7 +30,7 @@ export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Pr
       leaveTo="opacity-0"
     >
       <div className={classes}>
-        <div className="p-2">
+        <div className="p-1">
           <p className="text-sm text-center font-medium">{message}</p>
         </div>
       </div>
