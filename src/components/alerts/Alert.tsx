@@ -14,7 +14,7 @@ export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Pr
     'flex z-20 max-w-sm shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
     {
       'bg-black text-white': variant === 'error',
-      'bg-black text-white': variant === 'success',
+      'bg-transparent text-white': variant === 'success',
     }
   )
 
