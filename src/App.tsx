@@ -308,7 +308,7 @@ function App() {
 
       <button
         type="button"
-        className="mx-auto mt-2 flex items-center px-2.5 py-0 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
+        className="mx-auto mt-4 flex items-center px-2.5 py-0 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
         onClick={() => setIsInfoModalOpen(true)}
       >
           <QuestionMarkCircleIcon
