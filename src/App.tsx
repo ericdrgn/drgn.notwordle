@@ -263,7 +263,7 @@ function App() {
           />
         ) : (
           <EyeIcon
-            className="h-6 w-6 mr-2 stroke-slate-800 dark:stroke-slate-800 cursor-pointer"
+            className="h-6 w-6 mr-2 stroke-slate-700 dark:stroke-slate-700 cursor-pointer"
             onClick={() => {
               handleDarkMode(!isDarkMode)
               showErrorAlert(VIS_MODE)
@@ -314,11 +314,11 @@ function App() {
         onClick={() => setIsInfoModalOpen(true)}
       >
           <QuestionMarkCircleIcon
-                    className="h-6 w-6 mr-0 cursor-pointer stroke-slate-800 dark:stroke-white"
+                    className="h-6 w-6 mr-0 cursor-pointer stroke-slate-700 dark:stroke-white"
                   />
       </button>
       <div className="flex w-80 mx-auto items-center">
-        <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-800 dark:text-white">
+        <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-700 dark:text-white">
           {GAME_TITLE}
         </h1>
       </div>
