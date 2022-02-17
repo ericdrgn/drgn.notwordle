@@ -235,7 +235,7 @@ function App() {
       <div className="flex w-80 mx-auto items-center mb-6 mt-4">
         <AlertContainer />
         <h1 className="text-xl ml-2.5 grow font-bold text-black dark:text-black">
-          {GAME_TITLE}
+           
         </h1>
         {isHardMode ? (
           <PuzzleIcon
