@@ -1,13 +1,13 @@
 html.dark {
   background-color: rgb(0, 0, 0);
-  webkit-tap-highlight-color: rgba(0,0,0,0);
-  webkit-tap-highlight-color: transparent;
-  outline: 0;
+  webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  webkit-tap-highlight-color: transparent !important;
+  outline: 0 !important;
 }
 html {
   background-color: rgb(0, 0, 0);
-  webkit-tap-highlight-color: rgba(0,0,0,0);
-  webkit-tap-highlight-color: transparent;
-  outline: 0;
+  webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+  webkit-tap-highlight-color: transparent !important;
+  outline: 0 !important;
 }
 
