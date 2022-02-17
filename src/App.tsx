@@ -141,8 +141,8 @@ function App() {
       const delayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
 
       showSuccessAlert(winMessage, {
-        delayMs,
-        onClose: () => setIsStatsModalOpen(true),
+        persist: true,
+        setIsStatsModalOpen(true),
       })
     }
     
