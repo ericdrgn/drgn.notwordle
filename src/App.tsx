@@ -320,15 +320,9 @@ function App() {
       </button>
       <div className="flex w-80 mx-auto items-center">
         <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-800 dark:text-white">
-          {GAME_TITLE}
+          {GAME_TITLE} {solutionIndex}
         </h1>
       </div>
-      <div className="flex flex mx-auto items-center">
-        <h1 className="mx-auto mt-0 flex items-center px-2.5 py-0 text-m font-bold text-slate-800 dark:text-white">
-          {solutionIndex}
-        </h1>
-      </div>
-
     </div>
   )
 }
