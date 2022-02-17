@@ -11,7 +11,7 @@ type Props = {
 
 export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Props) => {
   const classes = classNames(
-    'fixed z-20 top-14 left-1/2 transform -translate-x-1/2 max-w-sm shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
+    'flex z-20 max-w-sm shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden',
     {
       'bg-slate-800 text-white': variant === 'error',
       'bg-black text-white': variant === 'success',
