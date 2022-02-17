@@ -142,7 +142,9 @@ function App() {
 
       showSuccessAlert(winMessage, {
         persist: true,
-        setIsStatsModalOpen(true),
+        setTimeout(() => {
+        setIsStatsModalOpen(true)
+      }, GAME_LOST_INFO_DELAY)
       })
     }
     
