@@ -308,7 +308,7 @@ function App() {
 
       <button
         type="button"
-        className="mx-auto mt-8 flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
+        className="mx-auto mt-2 flex items-center px-2.5 py-0 border border-transparent text-xs font-medium rounded text-black dark:text-white bg-black hover:bg-black select-none"
         onClick={() => setIsInfoModalOpen(true)}
       >
           <CodeIcon
@@ -316,7 +316,7 @@ function App() {
                   />
       </button>
       <div className="flex w-80 mx-auto items-center">
-        <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
+        <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-800 dark:text-white">
           {GAME_TITLE}
         </h1>
       </div>
