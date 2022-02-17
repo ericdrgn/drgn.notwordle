@@ -90,7 +90,7 @@ export const Keyboard = ({
       <div className="flex justify-center">
         <Key width={65.4} status="absent" value="DELETE" onClick={onClick}>
           <BackspaceIcon
-                    className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-2 stroke-white dark:stroke-white"
                   />
         </Key>
         {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
@@ -104,7 +104,7 @@ export const Keyboard = ({
         ))}
         <Key width={65.4} status="absent" value="ENTER" onClick={onClick}>
           <CheckCircleIcon
-                    className="h-6 w-6 mr-2 cursor-pointer stroke-white dark:stroke-white"
+                    className="h-6 w-6 mr-2 stroke-white dark:stroke-white"
                   />
         </Key>
       </div>
