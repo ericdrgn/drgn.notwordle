@@ -60,10 +60,11 @@ export const getWordOfDay = () => {
   const nextday = (index + 1) * msInDay + epochMs
 
   return {
-    solution: WORDS[index % WORDS.length].toLowerCase(),
+    solution: WORDS[index % WORDS.length].toUpperCase(),
+    solutionDefinition: WORDS[index % WORDS.length].toLowerCase(), 
     solutionIndex: index,
     tomorrow: nextday,
   }
 }
 
-export const { solution, solutionIndex, tomorrow } = getWordOfDay()
+export const { solution, solutionDefinition, solutionIndex, tomorrow } = getWordOfDay()
