@@ -1,6 +1,6 @@
 import {
-  BackspaceIcon,
-  CheckCircleIcon,
+  FireIcon,
+  LoginIcon,
 } from '@heroicons/react/outline'
 import { getStatuses } from '../../lib/statuses'
 import { Key } from './Key'
@@ -89,7 +89,7 @@ export const Keyboard = ({
       </div>
       <div className="flex justify-center">
         <Key width={65.4} status="absent" value="DELETE" onClick={onClick}>
-          <BackspaceIcon
+          <FireIcon
                     className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
                   />
         </Key>
@@ -103,7 +103,7 @@ export const Keyboard = ({
           />
         ))}
         <Key width={65.4} status="absent" value="ENTER" onClick={onClick}>
-          <CheckCircleIcon
+          <LoginIcon
                     className="h-6 w-6 mr-0 stroke-white dark:stroke-white"
                   />
         </Key>
