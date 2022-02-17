@@ -317,7 +317,7 @@ function App() {
                   />
       </button>
       <div className="flex w-80 mx-auto items-center">
-        <h1 className="mx-auto flex items-center px-2.5 py-1.5 text-m font-bold text-slate-800 dark:text-white">
+        <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-800 dark:text-white">
           {GAME_TITLE}
         </h1>
       </div>
