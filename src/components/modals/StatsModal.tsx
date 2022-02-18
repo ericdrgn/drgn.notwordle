@@ -1,5 +1,6 @@
 import {
   ShareIcon,
+  RefreshIcon,
 } from '@heroicons/react/outline'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
@@ -61,6 +62,16 @@ export const StatsModal = ({
           <div>
             <h5><a href="https://wordler.space" className="underline font-bold">return</a> {NEW_WORD_TEXT} <a href={`https://en.wiktionary.org/wiki/${solutionDefinition}`} target="_blank" rel="noreferrer" className="underline font-bold">definition</a></h5>
           </div>
+          <button
+            type="button"
+            className="mt-2 mr-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
+            onClick={() => {
+              window.location.reload()
+            }}
+          >
+          <RefreshIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                  />
           <button
             type="button"
             className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
