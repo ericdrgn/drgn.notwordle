@@ -1,5 +1,5 @@
 export const WORDS = [
-  'class',
+'class',
 'boroughs',
 'autobahn',
 'plateful',
