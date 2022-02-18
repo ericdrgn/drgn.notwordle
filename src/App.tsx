@@ -318,7 +318,7 @@ function App() {
       </button>
       <div className="flex w-80 mx-auto items-center">
         <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-700 dark:text-white">
-          {GAME_TITLE} letters:{solutionLength}
+          {GAME_TITLE} | {solutionLength} letters
         </h1>
       </div>
 
