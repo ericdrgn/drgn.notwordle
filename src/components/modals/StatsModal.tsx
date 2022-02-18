@@ -1,5 +1,6 @@
 import {
   ShareIcon,
+  RefreshIcon,
 } from '@heroicons/react/outline'
 import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
@@ -68,6 +69,16 @@ export const StatsModal = ({
               daysInHours={true}
             />
           </div>
+          <button
+            type="button"
+            className="mt-2 mr-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
+            onClick={() => {
+              window.location.reload()
+            }}
+          >
+          <RefreshIcon
+                    className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
+                  />
           <button
             type="button"
             className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
