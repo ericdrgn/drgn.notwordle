@@ -59,13 +59,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                   />
       </div>
       <p className="text-sm text-white dark:bg-black dark:text-white">
-        <a
-          href="https://github.com/ericdrgn/drgn.notwordle"
-          className="underline font-bold"
-        >
-          source
-        </a>{' '}
-        and{' '}
+        check out{' '}
         <a
           href="https://wordler.space"
           className="underline font-bold"
