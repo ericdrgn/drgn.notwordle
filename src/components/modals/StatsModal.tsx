@@ -79,6 +79,7 @@ export const StatsModal = ({
           <RefreshIcon
                     className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
+          </button>
           <button
             type="button"
             className="mt-2 w-half rounded-md text-center border border-black shadow-sm px-4 py-2 bg-black text-base font-medium text-white hover:bg-black dark:border-white sm:text-sm"
