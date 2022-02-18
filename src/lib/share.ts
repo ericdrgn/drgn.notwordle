@@ -11,7 +11,7 @@ export const shareStatus = (
   handleShareToClipboard: () => void
 ) => {
   const textToShare =
-    `${GAME_TITLE} ${solutionDictionary} ${
+    `${GAME_TITLE} '|' ${solutionDictionary} ${
       lost ? '☠️' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n` +
       generateEmojiGrid(guesses)
