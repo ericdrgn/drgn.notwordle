@@ -24,14 +24,13 @@ import {
   HARD_MODE_ALERT_MESSAGE,
 } from './constants/strings'
 import {
-  MAX_WORD_LENGTH,
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
-  GAME_LOST_INFO_DELAY,
 } from './constants/settings'
 import {
   isWordInWordList,
   isWinningWord,
+  solutionLength,
   solution,
   findFirstUnusedReveal,
 } from './lib/words'
@@ -138,7 +137,7 @@ function App() {
     if (isGameWon) {
       const winMessage =
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
-      const delayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
+      const delayMs = REVEAL_TIME_MS * solutionLength
 
       showSuccessAlert(winMessage, {
         delayMs,
@@ -149,13 +148,13 @@ function App() {
     if (isGameLost) {
       setTimeout(() => {
         setIsStatsModalOpen(true)
-      }, GAME_LOST_INFO_DELAY)
+      }, (solutionLength + 1) * REVEAL_TIME_MS)
     }
   }, [isGameWon, isGameLost, showSuccessAlert])
 
   const onChar = (value: string) => {
     if (
-      currentGuess.length < MAX_WORD_LENGTH &&
+      currentGuess.length < solutionLength &&
       guesses.length < MAX_CHALLENGES &&
       !isGameWon
     ) {
@@ -171,7 +170,7 @@ function App() {
     if (isGameWon || isGameLost) {
       return
     }
-    if (!(currentGuess.length === MAX_WORD_LENGTH)) {
+    if (!(currentGuess.length === solutionLength)) {
       setCurrentRowClass('jiggle')
       return showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE, {
         onClose: clearCurrentRowClass,
@@ -201,12 +200,12 @@ function App() {
     // chars have been revealed
     setTimeout(() => {
       setIsRevealing(false)
-    }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
+    }, REVEAL_TIME_MS * solutionLength)
 
     const winningWord = isWinningWord(currentGuess)
 
     if (
-      currentGuess.length === MAX_WORD_LENGTH &&
+      currentGuess.length === solutionLength &&
       guesses.length < MAX_CHALLENGES &&
       !isGameWon
     ) {
@@ -223,7 +222,7 @@ function App() {
         setIsGameLost(true)
         showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
           persist: true,
-          delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
+          delayMs: REVEAL_TIME_MS * solutionLength + 1,
         })
       }
     }
