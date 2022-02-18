@@ -15,7 +15,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
   return (
     <BaseModal title="what is wordle?" isOpen={isOpen} handleClose={handleClose}>
       <p className="text-sm text-white dark:text-white">
-        you will have six guesses to get the wordle of the day. when a word is guessed
+        you will have six guesses to get the wordle. when a word is guessed
         the colors of the letters will change to reflect positions for the correct word. 
         the word can be anywhere from 3 to 9 letters, refreshing the page will get you a new word
       </p>
