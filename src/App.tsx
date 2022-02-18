@@ -140,12 +140,10 @@ function App() {
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
       const delayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
 
-      showSuccessAlert(winMessage, {
-        persist: true,
-        setTimeout(() => {
-        setIsStatsModalOpen(true)
-      }, GAME_LOST_INFO_DELAY)
-     }
+       showSuccessAlert(winMessage, {
+        delayMs,
+        onClose: () => setIsStatsModalOpen(true),
+      })
     }
     
     if (isGameLost) {
