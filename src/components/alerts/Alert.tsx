@@ -9,7 +9,7 @@ type Props = {
   topMost?: boolean
 }
 
-export const Alert = ({ isOpen, message, variant = 'error', topMost = false }: Props) => {
+export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Props) => {
   const classes = classNames(
     'flex z-20 max-w-sm',
     {
