@@ -145,7 +145,7 @@ function App() {
         setTimeout(() => {
         setIsStatsModalOpen(true)
       }, GAME_LOST_INFO_DELAY)
-      })
+     }
     }
     
     if (isGameLost) {
