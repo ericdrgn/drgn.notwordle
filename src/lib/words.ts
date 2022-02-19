@@ -53,7 +53,7 @@ export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
 
 export const getWordOfDay = () => {
   // December 31, 2021 Game Epoch
-  const index = Math.floor(Math.random() * 62020);
+  const index = Math.floor(Math.random() * 62021);
 
   return {
     solution: WORDS[index % WORDS.length].toUpperCase(),
