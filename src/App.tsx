@@ -28,7 +28,7 @@ import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
-  WELCOM_INFO_MODAL_MS,
+  WELCOME_INFO_MODAL_MS,
 } from './constants/settings'
 import {
   isWordInWordList,
