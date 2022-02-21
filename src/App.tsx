@@ -27,11 +27,12 @@ import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
+  MAX_WORD_LENGTH
+  GAME_LOST_INFO_DELAY,
 } from './constants/settings'
 import {
   isWordInWordList,
   isWinningWord,
-  solutionLength,
   solution,
   findFirstUnusedReveal,
 } from './lib/words'
@@ -140,7 +141,7 @@ function App() {
     if (isGameWon) {
       const winMessage =
         WIN_MESSAGES[Math.floor(Math.random() * WIN_MESSAGES.length)]
-      const delayMs = REVEAL_TIME_MS * solutionLength
+      const delayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
 
       showSuccessAlert(winMessage, {
         delayMs,
@@ -151,13 +152,13 @@ function App() {
     if (isGameLost) {
       setTimeout(() => {
         setIsStatsModalOpen(true)
-      }, (solutionLength + 1) * REVEAL_TIME_MS)
+      }, GAME_LOST_INFO_DELAY)
     }
   }, [isGameWon, isGameLost, showSuccessAlert])
 
   const onChar = (value: string) => {
     if (
-      currentGuess.length < solutionLength &&
+      currentGuess.length < MAX_WORD_LENGTH &&
       guesses.length < MAX_CHALLENGES &&
       !isGameWon
     ) {
@@ -173,7 +174,7 @@ function App() {
     if (isGameWon || isGameLost) {
       return
     }
-    if (!(currentGuess.length === solutionLength)) {
+    if (!(currentGuess.length === MAX_WORD_LENGTH)) {
       setCurrentRowClass('jiggle')
       return showErrorAlert(NOT_ENOUGH_LETTERS_MESSAGE, {
         onClose: clearCurrentRowClass,
@@ -203,12 +204,12 @@ function App() {
     // chars have been revealed
     setTimeout(() => {
       setIsRevealing(false)
-    }, REVEAL_TIME_MS * solutionLength)
+    }, REVEAL_TIME_MS * MAX_WORD_LENGTH)
 
     const winningWord = isWinningWord(currentGuess)
 
     if (
-      currentGuess.length === solutionLength &&
+      currentGuess.length === MAX_WORD_LENGTH &&
       guesses.length < MAX_CHALLENGES &&
       !isGameWon
     ) {
@@ -225,7 +226,7 @@ function App() {
         setIsGameLost(true)
         showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
           persist: true,
-          delayMs: REVEAL_TIME_MS * solutionLength + 1,
+          delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
         })
       }
     }
@@ -321,7 +322,7 @@ function App() {
       </button>
       <div className="flex w-80 mx-auto items-center">
         <h1 className="mx-auto flex items-center px-2.5 py-0 text-m font-bold text-slate-700 dark:text-white">
-          {GAME_TITLE} | {solutionLength} letters
+          {GAME_TITLE} | {MAX_WORD_LENGTH} letters
         </h1>
       </div>
 
