@@ -27,7 +27,7 @@ import {
   MAX_CHALLENGES,
   REVEAL_TIME_MS,
   WELCOME_INFO_MODAL_MS,
-  MAX_WORD_LENGTH
+  MAX_WORD_LENGTH,
   GAME_LOST_INFO_DELAY,
 } from './constants/settings'
 import {
