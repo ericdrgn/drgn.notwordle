@@ -1,8 +1,7 @@
 import { ReactNode } from 'react'
 import classnames from 'classnames'
 import { CharStatus } from '../../lib/statuses'
-import { REVEAL_TIME_MS } from '../../constants/settings'
-import { solutionLength } from '../../lib/words'
+import { MAX_WORD_LENGTH, REVEAL_TIME_MS } from '../../constants/settings'
 
 type Props = {
   children?: ReactNode
@@ -21,7 +20,7 @@ export const Key = ({
   onClick,
   isRevealing,
 }: Props) => {
-  const keyDelayMs = REVEAL_TIME_MS * solutionLength
+  const keyDelayMs = REVEAL_TIME_MS * MAX_WORD_LENGTH
 
   const classes = classnames(
     'flex items-center justify-center rounded mx-0.5 text-s font-bold cursor-pointer select-none dark:text-white',
