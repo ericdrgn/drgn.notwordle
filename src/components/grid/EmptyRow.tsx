@@ -1,8 +1,8 @@
 import { Cell } from './Cell'
-import { solutionLength } from '../../lib/words'
+import { MAX_WORD_LENGTH } from '../../constants/settings'
 
 export const EmptyRow = () => {
-  const emptyCells = Array.from(Array(solutionLength))
+  const emptyCells = Array.from(Array(MAX_WORD_LENGTH))
 
   return (
     <div className="flex justify-center mb-1">
