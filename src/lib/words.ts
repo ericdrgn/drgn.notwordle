@@ -59,8 +59,7 @@ export const getWordOfDay = () => {
     solution: WORDS[index % WORDS.length].toUpperCase(),
     solutionDefinition: WORDS[index % WORDS.length].toLowerCase(), 
     solutionIndex: index,
-    solutionLength: WORDS[index % WORDS.length].length,
   }
 }
 
-export const { solution, solutionDefinition, solutionIndex, solutionLength } = getWordOfDay()
+export const { solution, solutionDefinition, solutionIndex } = getWordOfDay()
