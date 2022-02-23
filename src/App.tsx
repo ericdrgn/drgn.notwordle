@@ -234,9 +234,9 @@ function App() {
 
   return (
     <div className="fixed grid grid-rows-[1fr_auto] grid-cols-1 bg-black top-0 left-0 w-full h-full font-mono font-extrabold">
+      <AlertContainer />
       <div className="w-full flex flex-col justify-between overflow-y-auto mx-auto sm:px-6 lg:px-8">
         <div className="sticky flex-shrink-0 top-0 h-12 bg-black flex-grow-0 flex gap-1 w-full max-w-prose mx-auto items-center px-4 z-[1000]">
-        <AlertContainer />
         <h1 className="text-xl ml-2.5 grow font-bold text-black dark:text-black">
            
         </h1>
