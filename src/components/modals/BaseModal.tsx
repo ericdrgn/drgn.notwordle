@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { XCircleIcon } from '@heroicons/react/outline'
 import { AlertContainer } from '../../components/alerts/AlertContainer'
 
 type Props = {
@@ -50,14 +49,10 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
 
             <div className="inline-block align-bottom bg-black rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6 dark:bg-black text-white">
               <div className="absolute right-4 top-4">
-                <XCircleIcon
-                  className="h-6 w-6 cursor-pointer dark:stroke-white"
-                  onClick={() => handleClose()}
-                />
+                <AlertContainer />
               </div>
               <div>
                 <div className="text-center">
-                  <AlertContainer />
                   <Dialog.Title
                     as="h3"
                     className="text-lg leading-6 font-medium dark:text-white"
