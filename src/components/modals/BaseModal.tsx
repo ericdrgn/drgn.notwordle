@@ -52,8 +52,10 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
               </div>
               <div>
                 <div className="text-center">
+                  <AlertContainer />
+                </div>
+                <div className="text-center">
                   <Dialog.Title
-                    <AlertContainer />
                     as="h3"
                     className="text-lg leading-6 font-medium dark:text-white"
                   >
