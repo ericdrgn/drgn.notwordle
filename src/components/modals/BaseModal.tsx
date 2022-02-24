@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCircleIcon } from '@heroicons/react/outline'
-import { AlertContainer } from '././alerts/AlertContainer'
-import { useAlert } from './context/AlertContext'
+import { AlertContainer } from './src/components/alerts/AlertContainer'
+import { useAlert } from './src/context/AlertContext'
 
 type Props = {
   title: string
