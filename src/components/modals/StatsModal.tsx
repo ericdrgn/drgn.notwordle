@@ -90,6 +90,5 @@ export const StatsModal = ({
         <AlertContainer />
       )}
     </BaseModal>
-    <AlertContainer />
   )
 }
