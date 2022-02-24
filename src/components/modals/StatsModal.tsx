@@ -14,6 +14,7 @@ import {
   GUESS_DISTRIBUTION_TEXT,
   NEW_WORD_TEXT,
 } from '../../constants/strings'
+import { AlertContainer } from '../../components/alerts/AlertContainer'
 
 type Props = {
   isOpen: boolean
@@ -67,6 +68,7 @@ export const StatsModal = ({
               date={tomorrow}
               daysInHours={true}
             />
+            <AlertContainer />
           </div>
           <button
             type="button"
