@@ -49,7 +49,6 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
 
             <div className="inline-block align-bottom bg-black rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6 dark:bg-black text-white">
               <div className="absolute right-4 top-4">
-                <AlertContainer />
               </div>
               <div>
                 <div className="text-center">
@@ -60,6 +59,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
                     {title}
                   </Dialog.Title>
                   <div className="mt-2">{children}</div>
+                 <AlertContainer />
                 </div>
               </div>
             </div>
