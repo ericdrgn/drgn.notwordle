@@ -14,7 +14,6 @@ import {
   GUESS_DISTRIBUTION_TEXT,
   NEW_WORD_TEXT,
 } from '../../constants/strings'
-import { AlertContainer } from '../../components/alerts/AlertContainer'
 
 type Props = {
   isOpen: boolean
@@ -58,7 +57,6 @@ export const StatsModal = ({
       <h4 className="text-lg leading-6 font-medium text-white dark:text-white">
         {GUESS_DISTRIBUTION_TEXT}
       </h4>
-      <AlertContainer />
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
