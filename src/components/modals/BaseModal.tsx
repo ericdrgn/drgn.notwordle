@@ -1,6 +1,8 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCircleIcon } from '@heroicons/react/outline'
+import { AlertContainer } from './components/alerts/AlertContainer'
+import { useAlert } from './context/AlertContext'
 
 type Props = {
   title: string
@@ -18,6 +20,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
         onClose={handleClose}
       >
         <div className="flex items-center justify-center min-h-screen py-10 px-4 text-center sm:block sm:p-0">
+          <AlertContainer />
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
