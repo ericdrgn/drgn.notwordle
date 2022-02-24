@@ -68,6 +68,7 @@ export const StatsModal = ({
               date={tomorrow}
               daysInHours={true}
             />
+          <AlertContainer />
           </div>
           <button
             type="button"
@@ -85,7 +86,6 @@ export const StatsModal = ({
                     className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
           </button>
-          <AlertContainer />
         </div>
       )}
     </BaseModal>
