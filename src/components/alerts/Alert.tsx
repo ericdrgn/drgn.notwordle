@@ -11,10 +11,10 @@ type Props = {
 
 export const Alert = ({ isOpen, message, variant = 'error', topMost = true }: Props) => {
   const classes = classNames(
-    'flex z-20 max-w-sm',
+    'flex z-2000 max-w-sm',
     {
-      'bg-black text-white z-20': variant === 'error',
-      'bg-transparent text-white z-20': variant === 'success',
+      'bg-black text-white': variant === 'error',
+      'bg-transparent text-white': variant === 'success',
     }
   )
 
