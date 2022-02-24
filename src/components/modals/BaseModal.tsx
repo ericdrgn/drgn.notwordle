@@ -1,6 +1,5 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { AlertContainer } from '../../components/alerts/AlertContainer'
 
 type Props = {
   title: string
@@ -56,9 +55,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium dark:text-white"
                   >
-                    <AlertContainer />
                     {title}
-                    <AlertContainer />
                   </Dialog.Title>
                   <div className="mt-2">{children}</div>
                 </div>
