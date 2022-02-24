@@ -57,7 +57,9 @@ export const StatsModal = ({
       <StatBar gameStats={gameStats} />
       <h4 className="text-lg leading-6 font-medium text-white dark:text-white">
         {GUESS_DISTRIBUTION_TEXT}
+        <AlertContainer />
       </h4>
+      <AlertContainer />
       <Histogram gameStats={gameStats} />
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
