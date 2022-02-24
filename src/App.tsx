@@ -60,7 +60,6 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [currentRowClass, setCurrentRowClass] = useState('')
-  const [setCompletedRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme')
@@ -128,7 +127,6 @@ function App() {
     } else {
       showErrorAlert(HARD_MODE_ALERT_MESSAGE)
       setCurrentRowClass('jiggle')
-      setCompletedRowClass('jiggle')
     }
   }
   
