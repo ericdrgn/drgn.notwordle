@@ -38,7 +38,6 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
           >
             &#8203;
           </span>
-          <AlertContainer />
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -50,6 +49,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
           >
             <div className="inline-block align-bottom bg-black rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6 dark:bg-black text-white">
               <div className="absolute right-4 top-4">
+                <AlertContainer />
                 <XCircleIcon
                   className="h-6 w-6 cursor-pointer dark:stroke-white"
                   onClick={() => handleClose()}
