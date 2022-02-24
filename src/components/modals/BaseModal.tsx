@@ -19,7 +19,6 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
         onClose={handleClose}
       >
         <div className="flex items-center justify-center min-h-screen py-10 px-4 text-center sm:block sm:p-0">
-          <AlertContainer />
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -39,6 +38,7 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
           >
             &#8203;
           </span>
+          <AlertContainer />
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
