@@ -126,8 +126,6 @@ function App() {
       showSuccessAlert(HARD_MODE)
     } else {
       showErrorAlert(HARD_MODE_ALERT_MESSAGE)
-      setCurrentRowClass('jiggle')
-      onClose: clearCurrentRowClass,
     }
   }
   
