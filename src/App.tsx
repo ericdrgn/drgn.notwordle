@@ -60,7 +60,7 @@ function App() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
   const [currentRowClass, setCurrentRowClass] = useState('')
-  const [completedRowClass, setCompletedRowClass] = useState('')
+  const [setCompletedRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(
     localStorage.getItem('theme')
