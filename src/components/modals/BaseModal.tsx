@@ -67,12 +67,12 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
                 </div>
               </div>
             </div>
+        <div className="sticky flex-shrink-0 top-0 h-12 bg-black flex-grow-0 flex gap-1 w-full max-w-prose mx-auto items-center px-4 z-[1000]">
+          <AlertContainer />
+        </div>
           </Transition.Child>
         </div>
       </Dialog>
-      <div className="sticky flex-shrink-0 top-0 h-12 bg-black flex-grow-0 flex gap-1 w-full max-w-prose mx-auto items-center px-4 z-[1000]">
-          <AlertContainer />
-        </div>
     </Transition.Root>
   )
 }
