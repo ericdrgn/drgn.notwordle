@@ -54,7 +54,6 @@ export const StatsModal = ({
       isOpen={isOpen}
       handleClose={handleClose}
     >
-    <AlertContainer />
       <StatBar gameStats={gameStats} />
       <h4 className="text-lg leading-6 font-medium text-white dark:text-white">
         {GUESS_DISTRIBUTION_TEXT}
@@ -64,7 +63,6 @@ export const StatsModal = ({
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
             <h5><a href="https://wordler.space" className="underline font-bold">return</a> {NEW_WORD_TEXT} <a href={`https://en.wiktionary.org/wiki/${solutionDefinition}`} target="_blank" rel="noreferrer" className="underline font-bold">definition</a></h5>
-            <AlertContainer />
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
@@ -87,8 +85,11 @@ export const StatsModal = ({
                     className="h-6 w-6 mr-1 cursor-pointer stroke-white dark:stroke-white"
                   />
           </button>
+          <AlertContainer />
         </div>
+        <AlertContainer />
       )}
     </BaseModal>
+    <AlertContainer />
   )
 }
