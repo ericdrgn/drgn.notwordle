@@ -61,7 +61,7 @@ export const StatsModal = ({
       {(isGameLost || isGameWon) && (
         <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
           <div>
-            <h5><a href="https://wordler.space" className="underline font-bold">return</a> {NEW_WORD_TEXT} <a href={`https://en.wiktionary.org/wiki/${solutionDefinition}`} target="_blank" rel="noreferrer" className="underline font-bold">definition</a></h5>
+            <h5><a href="https://wordler.space" className="underline font-bold">return</a> {NEW_WORD_TEXT} <a href={`https://en.wiktionary.org/wiki/${solutionDefinition}`} target="_blank" rel="noreferrer" className="underline font-bold">${solutionDefinition}</a></h5>
             <Countdown
               className="text-lg font-medium text-white dark:text-white"
               date={tomorrow}
