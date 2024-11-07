@@ -1,6 +1,7 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 import { GAME_TITLE } from '../constants/strings'
+import { GAME_URL } from '../constants/strings'
 import { MAX_CHALLENGES } from '../constants/settings'
 import { isMobileBrowser } from './browser'
 
@@ -15,6 +16,7 @@ export const shareStatus = (
       lost ? '☠️' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n` +
       generateEmojiGrid(guesses)
+     ${GAME_URL}
   
   const shareData = { text: textToShare }
 
