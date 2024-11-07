@@ -52,7 +52,7 @@ export const findFirstUnusedReveal = (word: string, guesses: string[]) => {
 }
 
 export const getWordOfDay = () => {
-  // specific epoch to keep all words the same just based on every 30 minutes
+  // specific epoch to keep all words the same but change hourly
   const epochMs = 1730937600
   const now = Date.now()
   const msInDay = 3600000
