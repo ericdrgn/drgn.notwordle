@@ -1,4 +1,5 @@
 export const GAME_TITLE = 'Recurrle'
+export const GAME_URL = 'https://r.wordler.space'
 export const WIN_MESSAGES = ['Are you, the one?', 'Nice', 'Is this your world?']
 export const GAME_COPIED_MESSAGE = 'Grid copied to clipboard'
 export const ABOUT_GAME_MESSAGE = 'About'
