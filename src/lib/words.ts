@@ -55,7 +55,7 @@ export const getWordOfDay = () => {
   // specific epoch to keep all words the same just based on every 30 minutes
   const epochMs = 1644562800000
   const now = Date.now()
-  const msInDay = 1800000
+  const msInDay = 3600000
   const index = Math.floor((now - epochMs) / msInDay)
   const nextday = (index + 1) * msInDay + epochMs
 
