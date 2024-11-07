@@ -15,7 +15,7 @@ export const shareStatus = (
     `${GAME_TITLE} ${solutionIndex} ${
       lost ? '☠️' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n` +
-      generateEmojiGrid(guesses)
+      generateEmojiGrid(guesses) +
     `${GAME_URL}`
      
   
